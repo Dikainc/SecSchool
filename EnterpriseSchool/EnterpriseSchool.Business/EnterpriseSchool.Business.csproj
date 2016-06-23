@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE168988-F234-4A3D-9C16-DC49185C1099}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnterpriseSchool.Business</RootNamespace>
+    <AssemblyName>EnterpriseSchool.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\EnterpriseSchool.Model\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssignmentGradingLogic.cs" />
+    <Compile Include="AssignmentLogic.cs" />
+    <Compile Include="AssignmentClassLevelLogic.cs" />
+    <Compile Include="BehaviourLogic.cs" />
+    <Compile Include="BloodGroupLogic.cs" />
+    <Compile Include="BusinessBaseLogic.cs" />
+    <Compile Include="ClassLevelLogic.cs" />
+    <Compile Include="ClassLogic.cs" />
+    <Compile Include="ContinousAssessmentLogic.cs" />
+    <Compile Include="CountryLogic.cs" />
+    <Compile Include="FeeDetailLogic.cs" />
+    <Compile Include="FeeLogic.cs" />
+    <Compile Include="FeeTypeLogic.cs" />
+    <Compile Include="GenotypeLogic.cs" />
+    <Compile Include="LevelLogic.cs" />
+    <Compile Include="LocalGovernmentLogic.cs" />
+    <Compile Include="NationalityLogic.cs" />
+    <Compile Include="ParentLogic.cs" />
+    <Compile Include="ParentStudentLogic.cs" />
+    <Compile Include="ParentVerificationLogic.cs" />
+    <Compile Include="PersonLogic.cs" />
+    <Compile Include="PersonTypeLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReligionLogic.cs" />
+    <Compile Include="ResultLogic.cs" />
+    <Compile Include="RoleLogic.cs" />
+    <Compile Include="SessionLogic.cs" />
+    <Compile Include="SessionTermLogic.cs" />
+    <Compile Include="SexLogic.cs" />
+    <Compile Include="SkillLogic.cs" />
+    <Compile Include="StaffLogic.cs" />
+    <Compile Include="StaffTypeLogic.cs" />
+    <Compile Include="StateLogic.cs" />
+    <Compile Include="StudentCategoryLogic.cs" />
+    <Compile Include="StudentLevelLogic.cs" />
+    <Compile Include="StudentLogic.cs" />
+    <Compile Include="StudentStatusLogic.cs" />
+    <Compile Include="SubjectLevelLogic.cs" />
+    <Compile Include="SubjectLogic.cs" />
+    <Compile Include="TeacherSubjectAllocationLogic.cs" />
+    <Compile Include="TermLogic.cs" />
+    <Compile Include="TitleLogic.cs" />
+    <Compile Include="UserLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnterpriseSchool.Data\EnterpriseSchool.Data.csproj">
+      <Project>{41c01134-f454-43c3-a89c-e340f4f1c18a}</Project>
+      <Name>EnterpriseSchool.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnterpriseSchool.Model\EnterpriseSchool.Model.csproj">
+      <Project>{34cb640f-7469-41b6-b6d2-3053dd5dbc3d}</Project>
+      <Name>EnterpriseSchool.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="School_DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="School_DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ASSIGNMENT" EntityType="School_DbModel.ASSIGNMENT" />
+    <EntitySet Name="ASSIGNMENT_CLASS_LEVEL" EntityType="School_DbModel.ASSIGNMENT_CLASS_LEVEL" />
+    <EntitySet Name="ASSIGNMENT_GRADING" EntityType="School_DbModel.ASSIGNMENT_GRADING" />
+    <EntitySet Name="BEHAVIOUR" EntityType="School_DbModel.BEHAVIOUR" />
+    <EntitySet Name="BEHAVIOUR_GRADING" EntityType="School_DbModel.BEHAVIOUR_GRADING" />
+    <EntitySet Name="BLOOD_GROUP" EntityType="School_DbModel.BLOOD_GROUP" />
+    <EntitySet Name="CLASS" EntityType="School_DbModel.CLASS" />
+    <EntitySet Name="CLASS_LEVEL" EntityType="School_DbModel.CLASS_LEVEL" />
+    <EntitySet Name="CONTINUOUS_ASSESSMENT" EntityType="School_DbModel.CONTINUOUS_ASSESSMENT" />
+    <EntitySet Name="COUNTRY" EntityType="School_DbModel.COUNTRY" />
+    <EntitySet Name="FEE" EntityType="School_DbModel.FEE" />
+    <EntitySet Name="FEE_DETAIL" EntityType="School_DbModel.FEE_DETAIL" />
+    <EntitySet Name="FEE_TYPE" EntityType="School_DbModel.FEE_TYPE" />
+    <EntitySet Name="GENOTYPE" EntityType="School_DbModel.GENOTYPE" />
+    <EntitySet Name="LEVEL" EntityType="School_DbModel.LEVEL" />
+    <EntitySet Name="LOCAL_GOVERNMENT" EntityType="School_DbModel.LOCAL_GOVERNMENT" />
+    <EntitySet Name="NATIONALITY" EntityType="School_DbModel.NATIONALITY" />
+    <EntitySet Name="PARENT" EntityType="School_DbModel.PARENT" />
+    <EntitySet Name="PARENT_STUDENT" EntityType="School_DbModel.PARENT_STUDENT" />
+    <EntitySet Name="PARENT_VERIFICATION" EntityType="School_DbModel.PARENT_VERIFICATION" />
+    <EntitySet Name="PAYMENT" EntityType="School_DbModel.PAYMENT" />
+    <EntitySet Name="PERSON" EntityType="School_DbModel.PERSON" />
+    <EntitySet Name="PERSON_TYPE" EntityType="School_DbModel.PERSON_TYPE" />
+    <EntitySet Name="RELATIONSHIP" EntityType="School_DbModel.RELATIONSHIP" />
+    <EntitySet Name="RELIGION" EntityType="School_DbModel.RELIGION" />
+    <EntitySet Name="RESULT" EntityType="School_DbModel.RESULT" />
+    <EntitySet Name="ROLE" EntityType="School_DbModel.ROLE" />
+    <EntitySet Name="SESSION" EntityType="School_DbModel.SESSION" />
+    <EntitySet Name="SESSION_TERM" EntityType="School_DbModel.SESSION_TERM" />
+    <EntitySet Name="SEX" EntityType="School_DbModel.SEX" />
+    <EntitySet Name="SKILL" EntityType="School_DbModel.SKILL" />
+    <EntitySet Name="STAFF" EntityType="School_DbModel.STAFF" />
+    <EntitySet Name="STAFF_TYPE" EntityType="School_DbModel.STAFF_TYPE" />
+    <EntitySet Name="STATE" EntityType="School_DbModel.STATE" />
+    <EntitySet Name="STUDENT" EntityType="School_DbModel.STUDENT" />
+    <EntitySet Name="STUDENT_CATEGORY" EntityType="School_DbModel.STUDENT_CATEGORY" />
+    <EntitySet Name="STUDENT_LEVEL" EntityType="School_DbModel.STUDENT_LEVEL" />
+    <EntitySet Name="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" EntityType="School_DbModel.STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    <EntitySet Name="STUDENT_STATUS" EntityType="School_DbModel.STUDENT_STATUS" />
+    <EntitySet Name="SUBJECT" EntityType="School_DbModel.SUBJECT" />
+    <EntitySet Name="SUBJECT_LEVEL" EntityType="School_DbModel.SUBJECT_LEVEL" />
+    <EntitySet Name="sysdiagrams" EntityType="School_DbModel.sysdiagrams" />
+    <EntitySet Name="TEACHER_SUBJECT_ALLOCATION" EntityType="School_DbModel.TEACHER_SUBJECT_ALLOCATION" />
+    <EntitySet Name="TERM" EntityType="School_DbModel.TERM" />
+    <EntitySet Name="TITLE" EntityType="School_DbModel.TITLE" />
+    <EntitySet Name="USER" EntityType="School_DbModel.USER" />
+    <AssociationSet Name="FK_ASSIGNMENT_CLASS_LEVEL" Association="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL">
+      <End Role="CLASS_LEVEL" EntitySet="CLASS_LEVEL" />
+      <End Role="ASSIGNMENT" EntitySet="ASSIGNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNMENT_CLASS_LEVEL_ASSIGNMENT" Association="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_ASSIGNMENT">
+      <End Role="ASSIGNMENT" EntitySet="ASSIGNMENT" />
+      <End Role="ASSIGNMENT_CLASS_LEVEL" EntitySet="ASSIGNMENT_CLASS_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNMENT_GRADING_ASSIGNMENT" Association="School_DbModel.FK_ASSIGNMENT_GRADING_ASSIGNMENT">
+      <End Role="ASSIGNMENT" EntitySet="ASSIGNMENT" />
+      <End Role="ASSIGNMENT_GRADING" EntitySet="ASSIGNMENT_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNMENT_STAFF" Association="School_DbModel.FK_ASSIGNMENT_STAFF">
+      <End Role="STAFF" EntitySet="STAFF" />
+      <End Role="ASSIGNMENT" EntitySet="ASSIGNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNMENT_SUBJECT" Association="School_DbModel.FK_ASSIGNMENT_SUBJECT">
+      <End Role="SUBJECT" EntitySet="SUBJECT" />
+      <End Role="ASSIGNMENT" EntitySet="ASSIGNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSIGNMENT_CLASS_LEVEL_CLASS_LEVEL" Association="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_CLASS_LEVEL">
+      <End Role="CLASS_LEVEL" EntitySet="CLASS_LEVEL" />
+      <End Role="ASSIGNMENT_CLASS_LEVEL" EntitySet="ASSIGNMENT_CLASS_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BEHAVIOUR_GRADING_BEHAVIOUR" Association="School_DbModel.FK_BEHAVIOUR_GRADING_BEHAVIOUR">
+      <End Role="BEHAVIOUR" EntitySet="BEHAVIOUR" />
+      <End Role="BEHAVIOUR_GRADING" EntitySet="BEHAVIOUR_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_BEHAVIOUR" Association="School_DbModel.FK_RESULT_BEHAVIOUR">
+      <End Role="BEHAVIOUR" EntitySet="BEHAVIOUR" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BEHAVIOUR_GRADING_CLASS" Association="School_DbModel.FK_BEHAVIOUR_GRADING_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="BEHAVIOUR_GRADING" EntitySet="BEHAVIOUR_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BEHAVIOUR_GRADING_LEVEL" Association="School_DbModel.FK_BEHAVIOUR_GRADING_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="BEHAVIOUR_GRADING" EntitySet="BEHAVIOUR_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BEHAVIOUR_GRADING_SESSION" Association="School_DbModel.FK_BEHAVIOUR_GRADING_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="BEHAVIOUR_GRADING" EntitySet="BEHAVIOUR_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BEHAVIOUR_GRADING_STUDENT" Association="School_DbModel.FK_BEHAVIOUR_GRADING_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="BEHAVIOUR_GRADING" EntitySet="BEHAVIOUR_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BEHAVIOUR_GRADING_TERM" Association="School_DbModel.FK_BEHAVIOUR_GRADING_TERM">
+      <End Role="TERM" EntitySet="TERM" />
+      <End Role="BEHAVIOUR_GRADING" EntitySet="BEHAVIOUR_GRADING" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_BLOOD_GROUP" Association="School_DbModel.FK_PERSON_BLOOD_GROUP">
+      <End Role="BLOOD_GROUP" EntitySet="BLOOD_GROUP" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASS_LEVEL_CLASS" Association="School_DbModel.FK_CLASS_LEVEL_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="CLASS_LEVEL" EntitySet="CLASS_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_CLASS" Association="School_DbModel.FK_RESULT_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_LEVEL_CLASS" Association="School_DbModel.FK_STUDENT_LEVEL_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="STUDENT_LEVEL" EntitySet="STUDENT_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_CLASS" Association="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" EntitySet="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_SUBJECT_ALLOCATION_CLASS" Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="TEACHER_SUBJECT_ALLOCATION" EntitySet="TEACHER_SUBJECT_ALLOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASS_LEVEL_LEVEL" Association="School_DbModel.FK_CLASS_LEVEL_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="CLASS_LEVEL" EntitySet="CLASS_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_CONTINUOUS_ASSESSMENT" Association="School_DbModel.FK_RESULT_CONTINUOUS_ASSESSMENT">
+      <End Role="CONTINUOUS_ASSESSMENT" EntitySet="CONTINUOUS_ASSESSMENT" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEE_DETAIL_FEE" Association="School_DbModel.FK_FEE_DETAIL_FEE">
+      <End Role="FEE" EntitySet="FEE" />
+      <End Role="FEE_DETAIL" EntitySet="FEE_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEE_DETAIL_FEE_TYPE" Association="School_DbModel.FK_FEE_DETAIL_FEE_TYPE">
+      <End Role="FEE_TYPE" EntitySet="FEE_TYPE" />
+      <End Role="FEE_DETAIL" EntitySet="FEE_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEE_DETAIL_LEVEL" Association="School_DbModel.FK_FEE_DETAIL_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="FEE_DETAIL" EntitySet="FEE_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FEE_DETAIL_SESSION" Association="School_DbModel.FK_FEE_DETAIL_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="FEE_DETAIL" EntitySet="FEE_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PAYMENT_FEE_TYPE" Association="School_DbModel.FK_PAYMENT_FEE_TYPE">
+      <End Role="FEE_TYPE" EntitySet="FEE_TYPE" />
+      <End Role="PAYMENT" EntitySet="PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_GENOTYPE" Association="School_DbModel.FK_PERSON_GENOTYPE">
+      <End Role="GENOTYPE" EntitySet="GENOTYPE" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_LEVEL" Association="School_DbModel.FK_RESULT_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_LEVEL_LEVEL" Association="School_DbModel.FK_STUDENT_LEVEL_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="STUDENT_LEVEL" EntitySet="STUDENT_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_LEVEL" Association="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" EntitySet="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBJECT_LEVEL_LEVEL" Association="School_DbModel.FK_SUBJECT_LEVEL_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="SUBJECT_LEVEL" EntitySet="SUBJECT_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_SUBJECT_ALLOCATION_LEVEL" Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_LEVEL">
+      <End Role="LEVEL" EntitySet="LEVEL" />
+      <End Role="TEACHER_SUBJECT_ALLOCATION" EntitySet="TEACHER_SUBJECT_ALLOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOCAL_GOVERNMENT_STATE" Association="School_DbModel.FK_LOCAL_GOVERNMENT_STATE">
+      <End Role="STATE" EntitySet="STATE" />
+      <End Role="LOCAL_GOVERNMENT" EntitySet="LOCAL_GOVERNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_LOCAL_GOVERNMENT1" Association="School_DbModel.FK_PERSON_LOCAL_GOVERNMENT1">
+      <End Role="LOCAL_GOVERNMENT" EntitySet="LOCAL_GOVERNMENT" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_NATIONALITY" Association="School_DbModel.FK_PERSON_NATIONALITY">
+      <End Role="NATIONALITY" EntitySet="NATIONALITY" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STATE_NATIONALITY" Association="School_DbModel.FK_STATE_NATIONALITY">
+      <End Role="NATIONALITY" EntitySet="NATIONALITY" />
+      <End Role="STATE" EntitySet="STATE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_RELATIONSHIP" Association="School_DbModel.FK_PARENT_RELATIONSHIP">
+      <End Role="RELATIONSHIP" EntitySet="RELATIONSHIP" />
+      <End Role="PARENT" EntitySet="PARENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_SEX" Association="School_DbModel.FK_PARENT_SEX">
+      <End Role="SEX" EntitySet="SEX" />
+      <End Role="PARENT" EntitySet="PARENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_STUDENT_PARENT" Association="School_DbModel.FK_PARENT_STUDENT_PARENT">
+      <End Role="PARENT" EntitySet="PARENT" />
+      <End Role="PARENT_STUDENT" EntitySet="PARENT_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_USER" Association="School_DbModel.FK_PARENT_USER">
+      <End Role="USER" EntitySet="USER" />
+      <End Role="PARENT" EntitySet="PARENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_STUDENT_STUDENT" Association="School_DbModel.FK_PARENT_STUDENT_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="PARENT_STUDENT" EntitySet="PARENT_STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARENT_VERIFICATION_PARENT" Association="School_DbModel.FK_PARENT_VERIFICATION_PARENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="PARENT_VERIFICATION" EntitySet="PARENT_VERIFICATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PAYMENT_PERSON" Association="School_DbModel.FK_PAYMENT_PERSON">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="PAYMENT" EntitySet="PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PAYMENT_PERSON_TYPE" Association="School_DbModel.FK_PAYMENT_PERSON_TYPE">
+      <End Role="PERSON_TYPE" EntitySet="PERSON_TYPE" />
+      <End Role="PAYMENT" EntitySet="PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PAYMENT_SESSION" Association="School_DbModel.FK_PAYMENT_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="PAYMENT" EntitySet="PAYMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_PERSON_TYPE" Association="School_DbModel.FK_PERSON_PERSON_TYPE">
+      <End Role="PERSON_TYPE" EntitySet="PERSON_TYPE" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_RELIGION" Association="School_DbModel.FK_PERSON_RELIGION">
+      <End Role="RELIGION" EntitySet="RELIGION" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_SEX" Association="School_DbModel.FK_PERSON_SEX">
+      <End Role="SEX" EntitySet="SEX" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSON_STATE" Association="School_DbModel.FK_PERSON_STATE">
+      <End Role="STATE" EntitySet="STATE" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_PERSON" Association="School_DbModel.FK_STAFF_PERSON">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="STAFF" EntitySet="STAFF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_PERSON" Association="School_DbModel.FK_STUDENT_PERSON">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USER_PERSON" Association="School_DbModel.FK_USER_PERSON">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="USER" EntitySet="USER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_SESSION" Association="School_DbModel.FK_RESULT_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_SKILL" Association="School_DbModel.FK_RESULT_SKILL">
+      <End Role="SKILL" EntitySet="SKILL" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_STUDENT" Association="School_DbModel.FK_RESULT_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_SUBJECT" Association="School_DbModel.FK_RESULT_SUBJECT">
+      <End Role="SUBJECT" EntitySet="SUBJECT" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULT_TERM" Association="School_DbModel.FK_RESULT_TERM">
+      <End Role="TERM" EntitySet="TERM" />
+      <End Role="RESULT" EntitySet="RESULT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USER_ROLE" Association="School_DbModel.FK_USER_ROLE">
+      <End Role="ROLE" EntitySet="ROLE" />
+      <End Role="USER" EntitySet="USER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SESSION_TERM_SESSION" Association="School_DbModel.FK_SESSION_TERM_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="SESSION_TERM" EntitySet="SESSION_TERM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_LEVEL_SESSION" Association="School_DbModel.FK_STUDENT_LEVEL_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="STUDENT_LEVEL" EntitySet="STUDENT_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_SESSION" Association="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" EntitySet="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_SUBJECT_ALLOCATION_SESSION" Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SESSION">
+      <End Role="SESSION" EntitySet="SESSION" />
+      <End Role="TEACHER_SUBJECT_ALLOCATION" EntitySet="TEACHER_SUBJECT_ALLOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SESSION_TERM_TERM" Association="School_DbModel.FK_SESSION_TERM_TERM">
+      <End Role="TERM" EntitySet="TERM" />
+      <End Role="SESSION_TERM" EntitySet="SESSION_TERM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_STAFF_TYPE" Association="School_DbModel.FK_STAFF_STAFF_TYPE">
+      <End Role="STAFF_TYPE" EntitySet="STAFF_TYPE" />
+      <End Role="STAFF" EntitySet="STAFF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STAFF_USER" Association="School_DbModel.FK_STAFF_USER">
+      <End Role="USER" EntitySet="USER" />
+      <End Role="STAFF" EntitySet="STAFF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_SUBJECT_ALLOCATION_STAFF" Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_STAFF">
+      <End Role="STAFF" EntitySet="STAFF" />
+      <End Role="TEACHER_SUBJECT_ALLOCATION" EntitySet="TEACHER_SUBJECT_ALLOCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_LEVEL_STUDENT" Association="School_DbModel.FK_STUDENT_LEVEL_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="STUDENT_LEVEL" EntitySet="STUDENT_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_STUDENT_CATEGORY" Association="School_DbModel.FK_STUDENT_STUDENT_CATEGORY">
+      <End Role="STUDENT_CATEGORY" EntitySet="STUDENT_CATEGORY" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_STUDENT_STATUS" Association="School_DbModel.FK_STUDENT_STUDENT_STATUS">
+      <End Role="STUDENT_STATUS" EntitySet="STUDENT_STATUS" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_USER" Association="School_DbModel.FK_STUDENT_USER">
+      <End Role="USER" EntitySet="USER" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBJECT_LEVEL_SUBJECT" Association="School_DbModel.FK_SUBJECT_LEVEL_SUBJECT">
+      <End Role="SUBJECT" EntitySet="SUBJECT" />
+      <End Role="SUBJECT_LEVEL" EntitySet="SUBJECT_LEVEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEACHER_SUBJECT_ALLOCATION_SUBJECT" Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SUBJECT">
+      <End Role="SUBJECT" EntitySet="SUBJECT" />
+      <End Role="TEACHER_SUBJECT_ALLOCATION" EntitySet="TEACHER_SUBJECT_ALLOCATION" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ASSIGNMENT">
+    <Key>
+      <PropertyRef Name="Assignment_Id" />
+    </Key>
+    <Property Name="Assignment_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Assignment_Topic" Type="String" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="Assignment_Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Staff_id" Type="Int64" Nullable="false" />
+    <Property Name="Class_Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date_Due" Type="DateTime" Precision="3" />
+    <Property Name="Attached_File_Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="Subject_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CLASS_LEVEL" Relationship="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL" FromRole="ASSIGNMENT" ToRole="CLASS_LEVEL" />
+    <NavigationProperty Name="ASSIGNMENT_CLASS_LEVEL" Relationship="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_ASSIGNMENT" FromRole="ASSIGNMENT" ToRole="ASSIGNMENT_CLASS_LEVEL" />
+    <NavigationProperty Name="ASSIGNMENT_GRADING" Relationship="School_DbModel.FK_ASSIGNMENT_GRADING_ASSIGNMENT" FromRole="ASSIGNMENT" ToRole="ASSIGNMENT_GRADING" />
+    <NavigationProperty Name="STAFF" Relationship="School_DbModel.FK_ASSIGNMENT_STAFF" FromRole="ASSIGNMENT" ToRole="STAFF" />
+    <NavigationProperty Name="SUBJECT" Relationship="School_DbModel.FK_ASSIGNMENT_SUBJECT" FromRole="ASSIGNMENT" ToRole="SUBJECT" />
+  </EntityType>
+  <EntityType Name="ASSIGNMENT_CLASS_LEVEL">
+    <Key>
+      <PropertyRef Name="Assignment_Class_Level_Id" />
+    </Key>
+    <Property Name="Assignment_Class_Level_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Assignment_Id" Type="Int64" Nullable="false" />
+    <Property Name="Class_Level_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ASSIGNMENT" Relationship="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_ASSIGNMENT" FromRole="ASSIGNMENT_CLASS_LEVEL" ToRole="ASSIGNMENT" />
+    <NavigationProperty Name="CLASS_LEVEL" Relationship="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_CLASS_LEVEL" FromRole="ASSIGNMENT_CLASS_LEVEL" ToRole="CLASS_LEVEL" />
+  </EntityType>
+  <EntityType Name="ASSIGNMENT_GRADING">
+    <Key>
+      <PropertyRef Name="Assignment_Grading_Id" />
+    </Key>
+    <Property Name="Assignment_Grading_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Assignment_Id" Type="Int64" Nullable="false" />
+    <Property Name="Assignment_Grade" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ASSIGNMENT" Relationship="School_DbModel.FK_ASSIGNMENT_GRADING_ASSIGNMENT" FromRole="ASSIGNMENT_GRADING" ToRole="ASSIGNMENT" />
+  </EntityType>
+  <EntityType Name="BEHAVIOUR">
+    <Key>
+      <PropertyRef Name="Behaviour_Id" />
+    </Key>
+    <Property Name="Behaviour_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Behaviour_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BEHAVIOUR_GRADING" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_BEHAVIOUR" FromRole="BEHAVIOUR" ToRole="BEHAVIOUR_GRADING" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_BEHAVIOUR" FromRole="BEHAVIOUR" ToRole="RESULT" />
+  </EntityType>
+  <EntityType Name="BEHAVIOUR_GRADING">
+    <Key>
+      <PropertyRef Name="Behaviour_Grading_Id" />
+    </Key>
+    <Property Name="Behaviour_Grading_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Class_Id" Type="Int32" Nullable="false" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Id" Type="Int64" Nullable="false" />
+    <Property Name="Term_Id" Type="Int32" Nullable="false" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+    <Property Name="Behaviour_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BEHAVIOUR" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_BEHAVIOUR" FromRole="BEHAVIOUR_GRADING" ToRole="BEHAVIOUR" />
+    <NavigationProperty Name="CLASS" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_CLASS" FromRole="BEHAVIOUR_GRADING" ToRole="CLASS" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_LEVEL" FromRole="BEHAVIOUR_GRADING" ToRole="LEVEL" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_SESSION" FromRole="BEHAVIOUR_GRADING" ToRole="SESSION" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_STUDENT" FromRole="BEHAVIOUR_GRADING" ToRole="STUDENT" />
+    <NavigationProperty Name="TERM" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_TERM" FromRole="BEHAVIOUR_GRADING" ToRole="TERM" />
+  </EntityType>
+  <EntityType Name="BLOOD_GROUP">
+    <Key>
+      <PropertyRef Name="Blood_Group_Id" />
+    </Key>
+    <Property Name="Blood_Group_Id" Type="Int32" Nullable="false" />
+    <Property Name="Blood_Group_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activated" Type="Boolean" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_BLOOD_GROUP" FromRole="BLOOD_GROUP" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="CLASS">
+    <Key>
+      <PropertyRef Name="Class_Id" />
+    </Key>
+    <Property Name="Class_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Class_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Activated" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BEHAVIOUR_GRADING" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_CLASS" FromRole="CLASS" ToRole="BEHAVIOUR_GRADING" />
+    <NavigationProperty Name="CLASS_LEVEL" Relationship="School_DbModel.FK_CLASS_LEVEL_CLASS" FromRole="CLASS" ToRole="CLASS_LEVEL" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_CLASS" FromRole="CLASS" ToRole="RESULT" />
+    <NavigationProperty Name="STUDENT_LEVEL" Relationship="School_DbModel.FK_STUDENT_LEVEL_CLASS" FromRole="CLASS" ToRole="STUDENT_LEVEL" />
+    <NavigationProperty Name="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Relationship="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_CLASS" FromRole="CLASS" ToRole="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    <NavigationProperty Name="TEACHER_SUBJECT_ALLOCATION" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_CLASS" FromRole="CLASS" ToRole="TEACHER_SUBJECT_ALLOCATION" />
+  </EntityType>
+  <EntityType Name="CLASS_LEVEL">
+    <Key>
+      <PropertyRef Name="Class_Level_Id" />
+    </Key>
+    <Property Name="Class_Level_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Class_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ASSIGNMENT" Relationship="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL" FromRole="CLASS_LEVEL" ToRole="ASSIGNMENT" />
+    <NavigationProperty Name="ASSIGNMENT_CLASS_LEVEL" Relationship="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_CLASS_LEVEL" FromRole="CLASS_LEVEL" ToRole="ASSIGNMENT_CLASS_LEVEL" />
+    <NavigationProperty Name="CLASS" Relationship="School_DbModel.FK_CLASS_LEVEL_CLASS" FromRole="CLASS_LEVEL" ToRole="CLASS" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_CLASS_LEVEL_LEVEL" FromRole="CLASS_LEVEL" ToRole="LEVEL" />
+  </EntityType>
+  <EntityType Name="CONTINUOUS_ASSESSMENT">
+    <Key>
+      <PropertyRef Name="Continuous_Assessment_Id" />
+    </Key>
+    <Property Name="Continuous_Assessment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CA1" Type="Double" Nullable="false" />
+    <Property Name="CA2" Type="Double" />
+    <Property Name="CA3" Type="Double" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_CONTINUOUS_ASSESSMENT" FromRole="CONTINUOUS_ASSESSMENT" ToRole="RESULT" />
+  </EntityType>
+  <EntityType Name="COUNTRY">
+    <Key>
+      <PropertyRef Name="Country_Id" />
+    </Key>
+    <Property Name="Country_Id" Type="Int32" Nullable="false" />
+    <Property Name="Country_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FEE">
+    <Key>
+      <PropertyRef Name="Fee_Id" />
+    </Key>
+    <Property Name="Fee_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fee_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Fee_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FEE_DETAIL" Relationship="School_DbModel.FK_FEE_DETAIL_FEE" FromRole="FEE" ToRole="FEE_DETAIL" />
+  </EntityType>
+  <EntityType Name="FEE_DETAIL">
+    <Key>
+      <PropertyRef Name="Fee_Detail_Id" />
+    </Key>
+    <Property Name="Fee_Detail_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fee_Id" Type="Int32" Nullable="false" />
+    <Property Name="Fee_Type_Id" Type="Int32" />
+    <Property Name="Level_Id" Type="Int32" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FEE" Relationship="School_DbModel.FK_FEE_DETAIL_FEE" FromRole="FEE_DETAIL" ToRole="FEE" />
+    <NavigationProperty Name="FEE_TYPE" Relationship="School_DbModel.FK_FEE_DETAIL_FEE_TYPE" FromRole="FEE_DETAIL" ToRole="FEE_TYPE" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_FEE_DETAIL_LEVEL" FromRole="FEE_DETAIL" ToRole="LEVEL" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_FEE_DETAIL_SESSION" FromRole="FEE_DETAIL" ToRole="SESSION" />
+  </EntityType>
+  <EntityType Name="FEE_TYPE">
+    <Key>
+      <PropertyRef Name="Fee_Type_Id" />
+    </Key>
+    <Property Name="Fee_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fee_Type_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fee_Type_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FEE_DETAIL" Relationship="School_DbModel.FK_FEE_DETAIL_FEE_TYPE" FromRole="FEE_TYPE" ToRole="FEE_DETAIL" />
+    <NavigationProperty Name="PAYMENT" Relationship="School_DbModel.FK_PAYMENT_FEE_TYPE" FromRole="FEE_TYPE" ToRole="PAYMENT" />
+  </EntityType>
+  <EntityType Name="GENOTYPE">
+    <Key>
+      <PropertyRef Name="Genotype_Id" />
+    </Key>
+    <Property Name="Genotype_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Genotype_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_GENOTYPE" FromRole="GENOTYPE" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="LEVEL">
+    <Key>
+      <PropertyRef Name="Level_Id" />
+    </Key>
+    <Property Name="Level_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Level_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activated" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BEHAVIOUR_GRADING" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_LEVEL" FromRole="LEVEL" ToRole="BEHAVIOUR_GRADING" />
+    <NavigationProperty Name="CLASS_LEVEL" Relationship="School_DbModel.FK_CLASS_LEVEL_LEVEL" FromRole="LEVEL" ToRole="CLASS_LEVEL" />
+    <NavigationProperty Name="FEE_DETAIL" Relationship="School_DbModel.FK_FEE_DETAIL_LEVEL" FromRole="LEVEL" ToRole="FEE_DETAIL" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_LEVEL" FromRole="LEVEL" ToRole="RESULT" />
+    <NavigationProperty Name="STUDENT_LEVEL" Relationship="School_DbModel.FK_STUDENT_LEVEL_LEVEL" FromRole="LEVEL" ToRole="STUDENT_LEVEL" />
+    <NavigationProperty Name="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Relationship="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_LEVEL" FromRole="LEVEL" ToRole="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    <NavigationProperty Name="SUBJECT_LEVEL" Relationship="School_DbModel.FK_SUBJECT_LEVEL_LEVEL" FromRole="LEVEL" ToRole="SUBJECT_LEVEL" />
+    <NavigationProperty Name="TEACHER_SUBJECT_ALLOCATION" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_LEVEL" FromRole="LEVEL" ToRole="TEACHER_SUBJECT_ALLOCATION" />
+  </EntityType>
+  <EntityType Name="LOCAL_GOVERNMENT">
+    <Key>
+      <PropertyRef Name="Local_Government_Id" />
+    </Key>
+    <Property Name="Local_Government_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Local_Government_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State_Id" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="STATE" Relationship="School_DbModel.FK_LOCAL_GOVERNMENT_STATE" FromRole="LOCAL_GOVERNMENT" ToRole="STATE" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_LOCAL_GOVERNMENT1" FromRole="LOCAL_GOVERNMENT" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="NATIONALITY">
+    <Key>
+      <PropertyRef Name="Nationality_Id" />
+    </Key>
+    <Property Name="Nationality_Id" Type="Int32" Nullable="false" />
+    <Property Name="Nationality_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_NATIONALITY" FromRole="NATIONALITY" ToRole="PERSON" />
+    <NavigationProperty Name="STATE" Relationship="School_DbModel.FK_STATE_NATIONALITY" FromRole="NATIONALITY" ToRole="STATE" />
+  </EntityType>
+  <EntityType Name="PARENT">
+    <Key>
+      <PropertyRef Name="Parent_Id" />
+    </Key>
+    <Property Name="Parent_Id" Type="Int64" Nullable="false" />
+    <Property Name="User_Id" Type="Int64" Nullable="false" />
+    <Property Name="Relatinship_with_Student" Type="Int32" Nullable="false" />
+    <Property Name="Sex_Id" Type="Byte" Nullable="false" />
+    <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Verified" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="RELATIONSHIP" Relationship="School_DbModel.FK_PARENT_RELATIONSHIP" FromRole="PARENT" ToRole="RELATIONSHIP" />
+    <NavigationProperty Name="SEX" Relationship="School_DbModel.FK_PARENT_SEX" FromRole="PARENT" ToRole="SEX" />
+    <NavigationProperty Name="PARENT_STUDENT" Relationship="School_DbModel.FK_PARENT_STUDENT_PARENT" FromRole="PARENT" ToRole="PARENT_STUDENT" />
+    <NavigationProperty Name="USER" Relationship="School_DbModel.FK_PARENT_USER" FromRole="PARENT" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="PARENT_STUDENT">
+    <Key>
+      <PropertyRef Name="Parent_Student_Id" />
+    </Key>
+    <Property Name="Parent_Student_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Parent_Id" Type="Int64" Nullable="false" />
+    <Property Name="Student_Id" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="PARENT" Relationship="School_DbModel.FK_PARENT_STUDENT_PARENT" FromRole="PARENT_STUDENT" ToRole="PARENT" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_PARENT_STUDENT_STUDENT" FromRole="PARENT_STUDENT" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="PARENT_VERIFICATION">
+    <Key>
+      <PropertyRef Name="Parent_Verification_Id" />
+    </Key>
+    <Property Name="Parent_Verification_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_Id" Type="Int64" Nullable="false" />
+    <Property Name="Verification_Detail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Verified" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_PARENT_VERIFICATION_PARENT" FromRole="PARENT_VERIFICATION" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="PAYMENT">
+    <Key>
+      <PropertyRef Name="Payment_Id" />
+    </Key>
+    <Property Name="Payment_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Person_Id" Type="Int64" Nullable="false" />
+    <Property Name="Fee_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Date_Paid" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Person_Type_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FEE_TYPE" Relationship="School_DbModel.FK_PAYMENT_FEE_TYPE" FromRole="PAYMENT" ToRole="FEE_TYPE" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PAYMENT_PERSON" FromRole="PAYMENT" ToRole="PERSON" />
+    <NavigationProperty Name="PERSON_TYPE" Relationship="School_DbModel.FK_PAYMENT_PERSON_TYPE" FromRole="PAYMENT" ToRole="PERSON_TYPE" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_PAYMENT_SESSION" FromRole="PAYMENT" ToRole="SESSION" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="Person_Id" />
+    </Key>
+    <Property Name="Person_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Other_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Initial" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Image_File_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Signature_File_Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Sex_Id" Type="Byte" Nullable="false" />
+    <Property Name="Contact_Address" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile_Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Date_Of_Birth" Type="DateTime" Precision="3" />
+    <Property Name="State_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Local_Government_Id" Type="Int32" />
+    <Property Name="Home_Town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Home_Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Religion_Id" Type="Int32" />
+    <Property Name="Nationality_Id" Type="Int32" />
+    <Property Name="Person_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Blood_Group_Id" Type="Int32" />
+    <Property Name="Genotype_Id" Type="Int32" />
+    <Property Name="Date_Entered" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="BLOOD_GROUP" Relationship="School_DbModel.FK_PERSON_BLOOD_GROUP" FromRole="PERSON" ToRole="BLOOD_GROUP" />
+    <NavigationProperty Name="GENOTYPE" Relationship="School_DbModel.FK_PERSON_GENOTYPE" FromRole="PERSON" ToRole="GENOTYPE" />
+    <NavigationProperty Name="LOCAL_GOVERNMENT" Relationship="School_DbModel.FK_PERSON_LOCAL_GOVERNMENT1" FromRole="PERSON" ToRole="LOCAL_GOVERNMENT" />
+    <NavigationProperty Name="NATIONALITY" Relationship="School_DbModel.FK_PERSON_NATIONALITY" FromRole="PERSON" ToRole="NATIONALITY" />
+    <NavigationProperty Name="PAYMENT" Relationship="School_DbModel.FK_PAYMENT_PERSON" FromRole="PERSON" ToRole="PAYMENT" />
+    <NavigationProperty Name="PERSON_TYPE" Relationship="School_DbModel.FK_PERSON_PERSON_TYPE" FromRole="PERSON" ToRole="PERSON_TYPE" />
+    <NavigationProperty Name="RELIGION" Relationship="School_DbModel.FK_PERSON_RELIGION" FromRole="PERSON" ToRole="RELIGION" />
+    <NavigationProperty Name="SEX" Relationship="School_DbModel.FK_PERSON_SEX" FromRole="PERSON" ToRole="SEX" />
+    <NavigationProperty Name="STATE" Relationship="School_DbModel.FK_PERSON_STATE" FromRole="PERSON" ToRole="STATE" />
+    <NavigationProperty Name="STAFF" Relationship="School_DbModel.FK_STAFF_PERSON" FromRole="PERSON" ToRole="STAFF" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_STUDENT_PERSON" FromRole="PERSON" ToRole="STUDENT" />
+    <NavigationProperty Name="USER" Relationship="School_DbModel.FK_USER_PERSON" FromRole="PERSON" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="PERSON_TYPE">
+    <Key>
+      <PropertyRef Name="Person_Type_Id" />
+    </Key>
+    <Property Name="Person_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Person_Type_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Person_Type_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PAYMENT" Relationship="School_DbModel.FK_PAYMENT_PERSON_TYPE" FromRole="PERSON_TYPE" ToRole="PAYMENT" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_PERSON_TYPE" FromRole="PERSON_TYPE" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="RELATIONSHIP">
+    <Key>
+      <PropertyRef Name="Relationship_Id" />
+    </Key>
+    <Property Name="Relationship_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Relationship_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activated" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="PARENT" Relationship="School_DbModel.FK_PARENT_RELATIONSHIP" FromRole="RELATIONSHIP" ToRole="PARENT" />
+  </EntityType>
+  <EntityType Name="RELIGION">
+    <Key>
+      <PropertyRef Name="Religion_Id" />
+    </Key>
+    <Property Name="Religion_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Religion_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_RELIGION" FromRole="RELIGION" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="RESULT">
+    <Key>
+      <PropertyRef Name="Result_Id" />
+    </Key>
+    <Property Name="Result_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_Id" Type="Int32" Nullable="false" />
+    <Property Name="Class_Id" Type="Int32" Nullable="false" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Id" Type="Int64" Nullable="false" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Term_Id" Type="Int32" Nullable="false" />
+    <Property Name="Continuous_Assessment_Id" Type="Int32" />
+    <Property Name="Exam_Score" Type="Double" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="Grade" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Behaviour_Id" Type="Int32" />
+    <Property Name="Skill_Id" Type="Int32" />
+    <NavigationProperty Name="BEHAVIOUR" Relationship="School_DbModel.FK_RESULT_BEHAVIOUR" FromRole="RESULT" ToRole="BEHAVIOUR" />
+    <NavigationProperty Name="CLASS" Relationship="School_DbModel.FK_RESULT_CLASS" FromRole="RESULT" ToRole="CLASS" />
+    <NavigationProperty Name="CONTINUOUS_ASSESSMENT" Relationship="School_DbModel.FK_RESULT_CONTINUOUS_ASSESSMENT" FromRole="RESULT" ToRole="CONTINUOUS_ASSESSMENT" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_RESULT_LEVEL" FromRole="RESULT" ToRole="LEVEL" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_RESULT_SESSION" FromRole="RESULT" ToRole="SESSION" />
+    <NavigationProperty Name="SKILL" Relationship="School_DbModel.FK_RESULT_SKILL" FromRole="RESULT" ToRole="SKILL" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_RESULT_STUDENT" FromRole="RESULT" ToRole="STUDENT" />
+    <NavigationProperty Name="SUBJECT" Relationship="School_DbModel.FK_RESULT_SUBJECT" FromRole="RESULT" ToRole="SUBJECT" />
+    <NavigationProperty Name="TERM" Relationship="School_DbModel.FK_RESULT_TERM" FromRole="RESULT" ToRole="TERM" />
+  </EntityType>
+  <EntityType Name="ROLE">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USER" Relationship="School_DbModel.FK_USER_ROLE" FromRole="ROLE" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="SESSION">
+    <Key>
+      <PropertyRef Name="Session_Id" />
+    </Key>
+    <Property Name="Session_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Session_Name" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Activated" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BEHAVIOUR_GRADING" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_SESSION" FromRole="SESSION" ToRole="BEHAVIOUR_GRADING" />
+    <NavigationProperty Name="FEE_DETAIL" Relationship="School_DbModel.FK_FEE_DETAIL_SESSION" FromRole="SESSION" ToRole="FEE_DETAIL" />
+    <NavigationProperty Name="PAYMENT" Relationship="School_DbModel.FK_PAYMENT_SESSION" FromRole="SESSION" ToRole="PAYMENT" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_SESSION" FromRole="SESSION" ToRole="RESULT" />
+    <NavigationProperty Name="SESSION_TERM" Relationship="School_DbModel.FK_SESSION_TERM_SESSION" FromRole="SESSION" ToRole="SESSION_TERM" />
+    <NavigationProperty Name="STUDENT_LEVEL" Relationship="School_DbModel.FK_STUDENT_LEVEL_SESSION" FromRole="SESSION" ToRole="STUDENT_LEVEL" />
+    <NavigationProperty Name="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Relationship="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_SESSION" FromRole="SESSION" ToRole="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" />
+    <NavigationProperty Name="TEACHER_SUBJECT_ALLOCATION" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SESSION" FromRole="SESSION" ToRole="TEACHER_SUBJECT_ALLOCATION" />
+  </EntityType>
+  <EntityType Name="SESSION_TERM">
+    <Key>
+      <PropertyRef Name="Session_Term_Id" />
+    </Key>
+    <Property Name="Session_Term_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Term_Id" Type="Int32" Nullable="false" />
+    <Property Name="Start_Date" Type="DateTime" Precision="3" />
+    <Property Name="End_Date" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_SESSION_TERM_SESSION" FromRole="SESSION_TERM" ToRole="SESSION" />
+    <NavigationProperty Name="TERM" Relationship="School_DbModel.FK_SESSION_TERM_TERM" FromRole="SESSION_TERM" ToRole="TERM" />
+  </EntityType>
+  <EntityType Name="SEX">
+    <Key>
+      <PropertyRef Name="Sex_Id" />
+    </Key>
+    <Property Name="Sex_Id" Type="Byte" Nullable="false" />
+    <Property Name="Sex_Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PARENT" Relationship="School_DbModel.FK_PARENT_SEX" FromRole="SEX" ToRole="PARENT" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_SEX" FromRole="SEX" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="SKILL">
+    <Key>
+      <PropertyRef Name="Skill_Id" />
+    </Key>
+    <Property Name="Skill_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Handwriting" Type="Int32" />
+    <Property Name="Fluency" Type="Int32" />
+    <Property Name="Games" Type="Int32" />
+    <Property Name="Sport" Type="Int32" />
+    <Property Name="Gymnastics" Type="Int32" />
+    <Property Name="Drawing" Type="Int32" />
+    <Property Name="Crafts" Type="Int32" />
+    <Property Name="Music" Type="Int32" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_SKILL" FromRole="SKILL" ToRole="RESULT" />
+  </EntityType>
+  <EntityType Name="STAFF">
+    <Key>
+      <PropertyRef Name="Staff_Id" />
+    </Key>
+    <Property Name="Staff_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Staff_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int64" Nullable="false" />
+    <Property Name="Person_Id" Type="Int64" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Other_Names" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ASSIGNMENT" Relationship="School_DbModel.FK_ASSIGNMENT_STAFF" FromRole="STAFF" ToRole="ASSIGNMENT" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_STAFF_PERSON" FromRole="STAFF" ToRole="PERSON" />
+    <NavigationProperty Name="STAFF_TYPE" Relationship="School_DbModel.FK_STAFF_STAFF_TYPE" FromRole="STAFF" ToRole="STAFF_TYPE" />
+    <NavigationProperty Name="USER" Relationship="School_DbModel.FK_STAFF_USER" FromRole="STAFF" ToRole="USER" />
+    <NavigationProperty Name="TEACHER_SUBJECT_ALLOCATION" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_STAFF" FromRole="STAFF" ToRole="TEACHER_SUBJECT_ALLOCATION" />
+  </EntityType>
+  <EntityType Name="STAFF_TYPE">
+    <Key>
+      <PropertyRef Name="Staff_Type_Id" />
+    </Key>
+    <Property Name="Staff_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Staff_Type_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Staff_Type_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="STAFF" Relationship="School_DbModel.FK_STAFF_STAFF_TYPE" FromRole="STAFF_TYPE" ToRole="STAFF" />
+  </EntityType>
+  <EntityType Name="STATE">
+    <Key>
+      <PropertyRef Name="State_Id" />
+    </Key>
+    <Property Name="State_Id" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="State_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LOCAL_GOVERNMENT" Relationship="School_DbModel.FK_LOCAL_GOVERNMENT_STATE" FromRole="STATE" ToRole="LOCAL_GOVERNMENT" />
+    <NavigationProperty Name="NATIONALITY" Relationship="School_DbModel.FK_STATE_NATIONALITY" FromRole="STATE" ToRole="NATIONALITY" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_PERSON_STATE" FromRole="STATE" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="STUDENT">
+    <Key>
+      <PropertyRef Name="Student_Id" />
+    </Key>
+    <Property Name="Student_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reg_No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Id" Type="Int64" Nullable="false" />
+    <Property Name="Student_Category_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Status_Id" Type="Int32" Nullable="false" />
+    <Property Name="Parent_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Parent_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Person_Id" Type="Int64" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Other_Names" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BEHAVIOUR_GRADING" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_STUDENT" FromRole="STUDENT" ToRole="BEHAVIOUR_GRADING" />
+    <NavigationProperty Name="PARENT_STUDENT" Relationship="School_DbModel.FK_PARENT_STUDENT_STUDENT" FromRole="STUDENT" ToRole="PARENT_STUDENT" />
+    <NavigationProperty Name="PARENT_VERIFICATION" Relationship="School_DbModel.FK_PARENT_VERIFICATION_PARENT" FromRole="STUDENT" ToRole="PARENT_VERIFICATION" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_STUDENT_PERSON" FromRole="STUDENT" ToRole="PERSON" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_STUDENT" FromRole="STUDENT" ToRole="RESULT" />
+    <NavigationProperty Name="STUDENT_LEVEL" Relationship="School_DbModel.FK_STUDENT_LEVEL_STUDENT" FromRole="STUDENT" ToRole="STUDENT_LEVEL" />
+    <NavigationProperty Name="STUDENT_CATEGORY" Relationship="School_DbModel.FK_STUDENT_STUDENT_CATEGORY" FromRole="STUDENT" ToRole="STUDENT_CATEGORY" />
+    <NavigationProperty Name="STUDENT_STATUS" Relationship="School_DbModel.FK_STUDENT_STUDENT_STATUS" FromRole="STUDENT" ToRole="STUDENT_STATUS" />
+    <NavigationProperty Name="USER" Relationship="School_DbModel.FK_STUDENT_USER" FromRole="STUDENT" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="STUDENT_CATEGORY">
+    <Key>
+      <PropertyRef Name="Student_Category_Id" />
+    </Key>
+    <Property Name="Student_Category_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_Category_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Student_Category_Descrption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_STUDENT_STUDENT_CATEGORY" FromRole="STUDENT_CATEGORY" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="STUDENT_LEVEL">
+    <Key>
+      <PropertyRef Name="Student_Level_Id" />
+    </Key>
+    <Property Name="Student_Level_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Id" Type="Int64" Nullable="false" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Class_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CLASS" Relationship="School_DbModel.FK_STUDENT_LEVEL_CLASS" FromRole="STUDENT_LEVEL" ToRole="CLASS" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_STUDENT_LEVEL_LEVEL" FromRole="STUDENT_LEVEL" ToRole="LEVEL" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_STUDENT_LEVEL_SESSION" FromRole="STUDENT_LEVEL" ToRole="SESSION" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_STUDENT_LEVEL_STUDENT" FromRole="STUDENT_LEVEL" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT">
+    <Key>
+      <PropertyRef Name="Class_Id" />
+      <PropertyRef Name="Level_Id" />
+    </Key>
+    <Property Name="Class_Id" Type="Int32" Nullable="false" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Reg_Serial_Number_Start_From" Type="Int32" Nullable="false" />
+    <Property Name="Reg_Number_Start_From" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Used" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CLASS" Relationship="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_CLASS" FromRole="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" ToRole="CLASS" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_LEVEL" FromRole="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" ToRole="LEVEL" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_SESSION" FromRole="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" ToRole="SESSION" />
+  </EntityType>
+  <EntityType Name="STUDENT_STATUS">
+    <Key>
+      <PropertyRef Name="Student_Status_Id" />
+    </Key>
+    <Property Name="Student_Status_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Status_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Student_Status_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_STUDENT_STUDENT_STATUS" FromRole="STUDENT_STATUS" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="SUBJECT">
+    <Key>
+      <PropertyRef Name="Subject_Id" />
+    </Key>
+    <Property Name="Subject_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ASSIGNMENT" Relationship="School_DbModel.FK_ASSIGNMENT_SUBJECT" FromRole="SUBJECT" ToRole="ASSIGNMENT" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_SUBJECT" FromRole="SUBJECT" ToRole="RESULT" />
+    <NavigationProperty Name="SUBJECT_LEVEL" Relationship="School_DbModel.FK_SUBJECT_LEVEL_SUBJECT" FromRole="SUBJECT" ToRole="SUBJECT_LEVEL" />
+    <NavigationProperty Name="TEACHER_SUBJECT_ALLOCATION" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SUBJECT" FromRole="SUBJECT" ToRole="TEACHER_SUBJECT_ALLOCATION" />
+  </EntityType>
+  <EntityType Name="SUBJECT_LEVEL">
+    <Key>
+      <PropertyRef Name="Subject_Level_Id" />
+    </Key>
+    <Property Name="Subject_Level_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_Id" Type="Int32" Nullable="false" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_SUBJECT_LEVEL_LEVEL" FromRole="SUBJECT_LEVEL" ToRole="LEVEL" />
+    <NavigationProperty Name="SUBJECT" Relationship="School_DbModel.FK_SUBJECT_LEVEL_SUBJECT" FromRole="SUBJECT_LEVEL" ToRole="SUBJECT" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TEACHER_SUBJECT_ALLOCATION">
+    <Key>
+      <PropertyRef Name="Teacher_Subject_Allocation_Id" />
+    </Key>
+    <Property Name="Teacher_Subject_Allocation_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Staff_Id" Type="Int64" Nullable="false" />
+    <Property Name="Level_Id" Type="Int32" Nullable="false" />
+    <Property Name="Class_Id" Type="Int32" Nullable="false" />
+    <Property Name="Session_Id" Type="Int32" Nullable="false" />
+    <Property Name="Activated" Type="Boolean" Nullable="false" />
+    <Property Name="SubJect_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CLASS" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_CLASS" FromRole="TEACHER_SUBJECT_ALLOCATION" ToRole="CLASS" />
+    <NavigationProperty Name="LEVEL" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_LEVEL" FromRole="TEACHER_SUBJECT_ALLOCATION" ToRole="LEVEL" />
+    <NavigationProperty Name="SESSION" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SESSION" FromRole="TEACHER_SUBJECT_ALLOCATION" ToRole="SESSION" />
+    <NavigationProperty Name="STAFF" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_STAFF" FromRole="TEACHER_SUBJECT_ALLOCATION" ToRole="STAFF" />
+    <NavigationProperty Name="SUBJECT" Relationship="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SUBJECT" FromRole="TEACHER_SUBJECT_ALLOCATION" ToRole="SUBJECT" />
+  </EntityType>
+  <EntityType Name="TERM">
+    <Key>
+      <PropertyRef Name="Term_Id" />
+    </Key>
+    <Property Name="Term_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Term_Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Activated" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BEHAVIOUR_GRADING" Relationship="School_DbModel.FK_BEHAVIOUR_GRADING_TERM" FromRole="TERM" ToRole="BEHAVIOUR_GRADING" />
+    <NavigationProperty Name="RESULT" Relationship="School_DbModel.FK_RESULT_TERM" FromRole="TERM" ToRole="RESULT" />
+    <NavigationProperty Name="SESSION_TERM" Relationship="School_DbModel.FK_SESSION_TERM_TERM" FromRole="TERM" ToRole="SESSION_TERM" />
+  </EntityType>
+  <EntityType Name="TITLE">
+    <Key>
+      <PropertyRef Name="Title_Id" />
+    </Key>
+    <Property Name="Title_Id" Type="Int32" Nullable="false" />
+    <Property Name="Title_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role_Id" Type="Int64" Nullable="false" />
+    <Property Name="Person_Id" Type="Int64" />
+    <Property Name="Last_Login_Date" Type="DateTime" Precision="3" />
+    <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="PARENT" Relationship="School_DbModel.FK_PARENT_USER" FromRole="USER" ToRole="PARENT" />
+    <NavigationProperty Name="PERSON" Relationship="School_DbModel.FK_USER_PERSON" FromRole="USER" ToRole="PERSON" />
+    <NavigationProperty Name="ROLE" Relationship="School_DbModel.FK_USER_ROLE" FromRole="USER" ToRole="ROLE" />
+    <NavigationProperty Name="STAFF" Relationship="School_DbModel.FK_STAFF_USER" FromRole="USER" ToRole="STAFF" />
+    <NavigationProperty Name="STUDENT" Relationship="School_DbModel.FK_STUDENT_USER" FromRole="USER" ToRole="STUDENT" />
+  </EntityType>
+  <Association Name="FK_ASSIGNMENT_CLASS_LEVEL">
+    <End Type="School_DbModel.CLASS_LEVEL" Role="CLASS_LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.ASSIGNMENT" Role="ASSIGNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS_LEVEL">
+        <PropertyRef Name="Class_Level_Id" />
+      </Principal>
+      <Dependent Role="ASSIGNMENT">
+        <PropertyRef Name="Class_Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNMENT_CLASS_LEVEL_ASSIGNMENT">
+    <End Type="School_DbModel.ASSIGNMENT" Role="ASSIGNMENT" Multiplicity="1" />
+    <End Type="School_DbModel.ASSIGNMENT_CLASS_LEVEL" Role="ASSIGNMENT_CLASS_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASSIGNMENT">
+        <PropertyRef Name="Assignment_Id" />
+      </Principal>
+      <Dependent Role="ASSIGNMENT_CLASS_LEVEL">
+        <PropertyRef Name="Assignment_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNMENT_GRADING_ASSIGNMENT">
+    <End Type="School_DbModel.ASSIGNMENT" Role="ASSIGNMENT" Multiplicity="1" />
+    <End Type="School_DbModel.ASSIGNMENT_GRADING" Role="ASSIGNMENT_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASSIGNMENT">
+        <PropertyRef Name="Assignment_Id" />
+      </Principal>
+      <Dependent Role="ASSIGNMENT_GRADING">
+        <PropertyRef Name="Assignment_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNMENT_STAFF">
+    <End Type="School_DbModel.STAFF" Role="STAFF" Multiplicity="1" />
+    <End Type="School_DbModel.ASSIGNMENT" Role="ASSIGNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF">
+        <PropertyRef Name="Staff_Id" />
+      </Principal>
+      <Dependent Role="ASSIGNMENT">
+        <PropertyRef Name="Staff_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNMENT_SUBJECT">
+    <End Type="School_DbModel.SUBJECT" Role="SUBJECT" Multiplicity="1" />
+    <End Type="School_DbModel.ASSIGNMENT" Role="ASSIGNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT">
+        <PropertyRef Name="Subject_Id" />
+      </Principal>
+      <Dependent Role="ASSIGNMENT">
+        <PropertyRef Name="Subject_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSIGNMENT_CLASS_LEVEL_CLASS_LEVEL">
+    <End Type="School_DbModel.CLASS_LEVEL" Role="CLASS_LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.ASSIGNMENT_CLASS_LEVEL" Role="ASSIGNMENT_CLASS_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS_LEVEL">
+        <PropertyRef Name="Class_Level_Id" />
+      </Principal>
+      <Dependent Role="ASSIGNMENT_CLASS_LEVEL">
+        <PropertyRef Name="Class_Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BEHAVIOUR_GRADING_BEHAVIOUR">
+    <End Type="School_DbModel.BEHAVIOUR" Role="BEHAVIOUR" Multiplicity="1" />
+    <End Type="School_DbModel.BEHAVIOUR_GRADING" Role="BEHAVIOUR_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BEHAVIOUR">
+        <PropertyRef Name="Behaviour_Id" />
+      </Principal>
+      <Dependent Role="BEHAVIOUR_GRADING">
+        <PropertyRef Name="Behaviour_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_BEHAVIOUR">
+    <End Type="School_DbModel.BEHAVIOUR" Role="BEHAVIOUR" Multiplicity="0..1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BEHAVIOUR">
+        <PropertyRef Name="Behaviour_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Behaviour_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BEHAVIOUR_GRADING_CLASS">
+    <End Type="School_DbModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="School_DbModel.BEHAVIOUR_GRADING" Role="BEHAVIOUR_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="BEHAVIOUR_GRADING">
+        <PropertyRef Name="Class_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BEHAVIOUR_GRADING_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.BEHAVIOUR_GRADING" Role="BEHAVIOUR_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="BEHAVIOUR_GRADING">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BEHAVIOUR_GRADING_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.BEHAVIOUR_GRADING" Role="BEHAVIOUR_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="BEHAVIOUR_GRADING">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BEHAVIOUR_GRADING_STUDENT">
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="1" />
+    <End Type="School_DbModel.BEHAVIOUR_GRADING" Role="BEHAVIOUR_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="Student_Id" />
+      </Principal>
+      <Dependent Role="BEHAVIOUR_GRADING">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BEHAVIOUR_GRADING_TERM">
+    <End Type="School_DbModel.TERM" Role="TERM" Multiplicity="1" />
+    <End Type="School_DbModel.BEHAVIOUR_GRADING" Role="BEHAVIOUR_GRADING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERM">
+        <PropertyRef Name="Term_Id" />
+      </Principal>
+      <Dependent Role="BEHAVIOUR_GRADING">
+        <PropertyRef Name="Term_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_BLOOD_GROUP">
+    <End Type="School_DbModel.BLOOD_GROUP" Role="BLOOD_GROUP" Multiplicity="0..1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BLOOD_GROUP">
+        <PropertyRef Name="Blood_Group_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Blood_Group_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASS_LEVEL_CLASS">
+    <End Type="School_DbModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="School_DbModel.CLASS_LEVEL" Role="CLASS_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="CLASS_LEVEL">
+        <PropertyRef Name="Class_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_CLASS">
+    <End Type="School_DbModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Class_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_LEVEL_CLASS">
+    <End Type="School_DbModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_LEVEL" Role="STUDENT_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_LEVEL">
+        <PropertyRef Name="Class_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_CLASS">
+    <End Type="School_DbModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT">
+        <PropertyRef Name="Class_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_SUBJECT_ALLOCATION_CLASS">
+    <End Type="School_DbModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="School_DbModel.TEACHER_SUBJECT_ALLOCATION" Role="TEACHER_SUBJECT_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="TEACHER_SUBJECT_ALLOCATION">
+        <PropertyRef Name="Class_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASS_LEVEL_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.CLASS_LEVEL" Role="CLASS_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="CLASS_LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_CONTINUOUS_ASSESSMENT">
+    <End Type="School_DbModel.CONTINUOUS_ASSESSMENT" Role="CONTINUOUS_ASSESSMENT" Multiplicity="0..1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTINUOUS_ASSESSMENT">
+        <PropertyRef Name="Continuous_Assessment_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Continuous_Assessment_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEE_DETAIL_FEE">
+    <End Type="School_DbModel.FEE" Role="FEE" Multiplicity="1" />
+    <End Type="School_DbModel.FEE_DETAIL" Role="FEE_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEE">
+        <PropertyRef Name="Fee_Id" />
+      </Principal>
+      <Dependent Role="FEE_DETAIL">
+        <PropertyRef Name="Fee_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEE_DETAIL_FEE_TYPE">
+    <End Type="School_DbModel.FEE_TYPE" Role="FEE_TYPE" Multiplicity="0..1" />
+    <End Type="School_DbModel.FEE_DETAIL" Role="FEE_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEE_TYPE">
+        <PropertyRef Name="Fee_Type_Id" />
+      </Principal>
+      <Dependent Role="FEE_DETAIL">
+        <PropertyRef Name="Fee_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEE_DETAIL_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="0..1" />
+    <End Type="School_DbModel.FEE_DETAIL" Role="FEE_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="FEE_DETAIL">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FEE_DETAIL_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.FEE_DETAIL" Role="FEE_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="FEE_DETAIL">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PAYMENT_FEE_TYPE">
+    <End Type="School_DbModel.FEE_TYPE" Role="FEE_TYPE" Multiplicity="1" />
+    <End Type="School_DbModel.PAYMENT" Role="PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEE_TYPE">
+        <PropertyRef Name="Fee_Type_Id" />
+      </Principal>
+      <Dependent Role="PAYMENT">
+        <PropertyRef Name="Fee_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_GENOTYPE">
+    <End Type="School_DbModel.GENOTYPE" Role="GENOTYPE" Multiplicity="0..1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GENOTYPE">
+        <PropertyRef Name="Genotype_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Genotype_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_LEVEL_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_LEVEL" Role="STUDENT_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBJECT_LEVEL_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.SUBJECT_LEVEL" Role="SUBJECT_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="SUBJECT_LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_SUBJECT_ALLOCATION_LEVEL">
+    <End Type="School_DbModel.LEVEL" Role="LEVEL" Multiplicity="1" />
+    <End Type="School_DbModel.TEACHER_SUBJECT_ALLOCATION" Role="TEACHER_SUBJECT_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEVEL">
+        <PropertyRef Name="Level_Id" />
+      </Principal>
+      <Dependent Role="TEACHER_SUBJECT_ALLOCATION">
+        <PropertyRef Name="Level_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOCAL_GOVERNMENT_STATE">
+    <End Type="School_DbModel.STATE" Role="STATE" Multiplicity="1" />
+    <End Type="School_DbModel.LOCAL_GOVERNMENT" Role="LOCAL_GOVERNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STATE">
+        <PropertyRef Name="State_Id" />
+      </Principal>
+      <Dependent Role="LOCAL_GOVERNMENT">
+        <PropertyRef Name="State_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_LOCAL_GOVERNMENT1">
+    <End Type="School_DbModel.LOCAL_GOVERNMENT" Role="LOCAL_GOVERNMENT" Multiplicity="0..1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCAL_GOVERNMENT">
+        <PropertyRef Name="Local_Government_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Local_Government_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_NATIONALITY">
+    <End Type="School_DbModel.NATIONALITY" Role="NATIONALITY" Multiplicity="0..1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NATIONALITY">
+        <PropertyRef Name="Nationality_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Nationality_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STATE_NATIONALITY">
+    <End Type="School_DbModel.NATIONALITY" Role="NATIONALITY" Multiplicity="1" />
+    <End Type="School_DbModel.STATE" Role="STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NATIONALITY">
+        <PropertyRef Name="Nationality_Id" />
+      </Principal>
+      <Dependent Role="STATE">
+        <PropertyRef Name="Nationality_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_RELATIONSHIP">
+    <End Type="School_DbModel.RELATIONSHIP" Role="RELATIONSHIP" Multiplicity="1" />
+    <End Type="School_DbModel.PARENT" Role="PARENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RELATIONSHIP">
+        <PropertyRef Name="Relationship_Id" />
+      </Principal>
+      <Dependent Role="PARENT">
+        <PropertyRef Name="Relatinship_with_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_SEX">
+    <End Type="School_DbModel.SEX" Role="SEX" Multiplicity="1" />
+    <End Type="School_DbModel.PARENT" Role="PARENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEX">
+        <PropertyRef Name="Sex_Id" />
+      </Principal>
+      <Dependent Role="PARENT">
+        <PropertyRef Name="Sex_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_STUDENT_PARENT">
+    <End Type="School_DbModel.PARENT" Role="PARENT" Multiplicity="1" />
+    <End Type="School_DbModel.PARENT_STUDENT" Role="PARENT_STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARENT">
+        <PropertyRef Name="Parent_Id" />
+      </Principal>
+      <Dependent Role="PARENT_STUDENT">
+        <PropertyRef Name="Parent_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_USER">
+    <End Type="School_DbModel.USER" Role="USER" Multiplicity="1" />
+    <End Type="School_DbModel.PARENT" Role="PARENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="PARENT">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_STUDENT_STUDENT">
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="1" />
+    <End Type="School_DbModel.PARENT_STUDENT" Role="PARENT_STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="Student_Id" />
+      </Principal>
+      <Dependent Role="PARENT_STUDENT">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARENT_VERIFICATION_PARENT">
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="1" />
+    <End Type="School_DbModel.PARENT_VERIFICATION" Role="PARENT_VERIFICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="Student_Id" />
+      </Principal>
+      <Dependent Role="PARENT_VERIFICATION">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PAYMENT_PERSON">
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="1" />
+    <End Type="School_DbModel.PAYMENT" Role="PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_Id" />
+      </Principal>
+      <Dependent Role="PAYMENT">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PAYMENT_PERSON_TYPE">
+    <End Type="School_DbModel.PERSON_TYPE" Role="PERSON_TYPE" Multiplicity="1" />
+    <End Type="School_DbModel.PAYMENT" Role="PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON_TYPE">
+        <PropertyRef Name="Person_Type_Id" />
+      </Principal>
+      <Dependent Role="PAYMENT">
+        <PropertyRef Name="Person_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PAYMENT_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.PAYMENT" Role="PAYMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="PAYMENT">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_PERSON_TYPE">
+    <End Type="School_DbModel.PERSON_TYPE" Role="PERSON_TYPE" Multiplicity="1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON_TYPE">
+        <PropertyRef Name="Person_Type_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Person_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_RELIGION">
+    <End Type="School_DbModel.RELIGION" Role="RELIGION" Multiplicity="0..1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RELIGION">
+        <PropertyRef Name="Religion_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Religion_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_SEX">
+    <End Type="School_DbModel.SEX" Role="SEX" Multiplicity="1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEX">
+        <PropertyRef Name="Sex_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="Sex_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSON_STATE">
+    <End Type="School_DbModel.STATE" Role="STATE" Multiplicity="0..1" />
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STATE">
+        <PropertyRef Name="State_Id" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="State_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_PERSON">
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="0..1" />
+    <End Type="School_DbModel.STAFF" Role="STAFF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_Id" />
+      </Principal>
+      <Dependent Role="STAFF">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_PERSON">
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="0..1" />
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_Id" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USER_PERSON">
+    <End Type="School_DbModel.PERSON" Role="PERSON" Multiplicity="0..1" />
+    <End Type="School_DbModel.USER" Role="USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_Id" />
+      </Principal>
+      <Dependent Role="USER">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_SKILL">
+    <End Type="School_DbModel.SKILL" Role="SKILL" Multiplicity="0..1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SKILL">
+        <PropertyRef Name="Skill_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Skill_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_STUDENT">
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="Student_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_SUBJECT">
+    <End Type="School_DbModel.SUBJECT" Role="SUBJECT" Multiplicity="1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT">
+        <PropertyRef Name="Subject_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Subject_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULT_TERM">
+    <End Type="School_DbModel.TERM" Role="TERM" Multiplicity="1" />
+    <End Type="School_DbModel.RESULT" Role="RESULT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERM">
+        <PropertyRef Name="Term_Id" />
+      </Principal>
+      <Dependent Role="RESULT">
+        <PropertyRef Name="Term_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USER_ROLE">
+    <End Type="School_DbModel.ROLE" Role="ROLE" Multiplicity="1" />
+    <End Type="School_DbModel.USER" Role="USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLE">
+        <PropertyRef Name="Role_Id" />
+      </Principal>
+      <Dependent Role="USER">
+        <PropertyRef Name="Role_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SESSION_TERM_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.SESSION_TERM" Role="SESSION_TERM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="SESSION_TERM">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_LEVEL_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_LEVEL" Role="STUDENT_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_LEVEL">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_REGISTRATION_NUMBER_ASSIGNMENT">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_SUBJECT_ALLOCATION_SESSION">
+    <End Type="School_DbModel.SESSION" Role="SESSION" Multiplicity="1" />
+    <End Type="School_DbModel.TEACHER_SUBJECT_ALLOCATION" Role="TEACHER_SUBJECT_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SESSION">
+        <PropertyRef Name="Session_Id" />
+      </Principal>
+      <Dependent Role="TEACHER_SUBJECT_ALLOCATION">
+        <PropertyRef Name="Session_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SESSION_TERM_TERM">
+    <End Type="School_DbModel.TERM" Role="TERM" Multiplicity="1" />
+    <End Type="School_DbModel.SESSION_TERM" Role="SESSION_TERM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERM">
+        <PropertyRef Name="Term_Id" />
+      </Principal>
+      <Dependent Role="SESSION_TERM">
+        <PropertyRef Name="Term_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_STAFF_TYPE">
+    <End Type="School_DbModel.STAFF_TYPE" Role="STAFF_TYPE" Multiplicity="1" />
+    <End Type="School_DbModel.STAFF" Role="STAFF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF_TYPE">
+        <PropertyRef Name="Staff_Type_Id" />
+      </Principal>
+      <Dependent Role="STAFF">
+        <PropertyRef Name="Staff_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STAFF_USER">
+    <End Type="School_DbModel.USER" Role="USER" Multiplicity="1" />
+    <End Type="School_DbModel.STAFF" Role="STAFF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="STAFF">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_SUBJECT_ALLOCATION_STAFF">
+    <End Type="School_DbModel.STAFF" Role="STAFF" Multiplicity="1" />
+    <End Type="School_DbModel.TEACHER_SUBJECT_ALLOCATION" Role="TEACHER_SUBJECT_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STAFF">
+        <PropertyRef Name="Staff_Id" />
+      </Principal>
+      <Dependent Role="TEACHER_SUBJECT_ALLOCATION">
+        <PropertyRef Name="Staff_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_LEVEL_STUDENT">
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT_LEVEL" Role="STUDENT_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="Student_Id" />
+      </Principal>
+      <Dependent Role="STUDENT_LEVEL">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_STUDENT_CATEGORY">
+    <End Type="School_DbModel.STUDENT_CATEGORY" Role="STUDENT_CATEGORY" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT_CATEGORY">
+        <PropertyRef Name="Student_Category_Id" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="Student_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_STUDENT_STATUS">
+    <End Type="School_DbModel.STUDENT_STATUS" Role="STUDENT_STATUS" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT_STATUS">
+        <PropertyRef Name="Student_Status_Id" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="Student_Status_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_USER">
+    <End Type="School_DbModel.USER" Role="USER" Multiplicity="1" />
+    <End Type="School_DbModel.STUDENT" Role="STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBJECT_LEVEL_SUBJECT">
+    <End Type="School_DbModel.SUBJECT" Role="SUBJECT" Multiplicity="1" />
+    <End Type="School_DbModel.SUBJECT_LEVEL" Role="SUBJECT_LEVEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT">
+        <PropertyRef Name="Subject_Id" />
+      </Principal>
+      <Dependent Role="SUBJECT_LEVEL">
+        <PropertyRef Name="Subject_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEACHER_SUBJECT_ALLOCATION_SUBJECT">
+    <End Type="School_DbModel.SUBJECT" Role="SUBJECT" Multiplicity="1" />
+    <End Type="School_DbModel.TEACHER_SUBJECT_ALLOCATION" Role="TEACHER_SUBJECT_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT">
+        <PropertyRef Name="Subject_Id" />
+      </Principal>
+      <Dependent Role="TEACHER_SUBJECT_ALLOCATION">
+        <PropertyRef Name="SubJect_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

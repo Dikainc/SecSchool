@@ -1,0 +1,45 @@
+﻿@using EnterpriseSchool.Web.Areas.Admin.ViewModels
+@model EnterpriseSchool.Web.Areas.Admin.ViewModels.UserViewModel
+@{
+    ViewBag.Title = "UploadedStudents";
+}
+
+<div class="col-md-12">
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Other Name</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Reg. No</th>
+                <th>Parent Phone</th>
+                <th>Parent Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Uploadstudents.Count(); i++)
+            {
+                int b = i + 1;
+                <tr>
+                    <td>@b</td>
+                    <td>@Model.Uploadstudents[i].FirstName</td>
+                    <td>@Model.Uploadstudents[i].LastName</td>
+                    <td>@Model.Uploadstudents[i].OtherName</td>
+                    <td>@Model.Uploadstudents[i].Username</td>
+                    <td>@Model.Uploadstudents[i].Password</td>
+                    <td>@Model.Uploadstudents[i].RegNo</td>
+                    <td>@Model.Uploadstudents[i].ParentPhone</td>
+                    <td>@Model.Uploadstudents[i].ParentEmail</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+   @Html.ActionLink("Add students", "SaveStudents",null, new{@class="btn btn-primary"})
+    
+</div>
+

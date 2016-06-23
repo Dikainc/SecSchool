@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a6a11e887c7a462ca8ee31ec04a8a924" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="School_DbModel.ASSIGNMENT" Width="1.5" PointX="12" PointY="29.5" />
+        <EntityTypeShape EntityType="School_DbModel.ASSIGNMENT_CLASS_LEVEL" Width="1.5" PointX="14.25" PointY="30.5" />
+        <EntityTypeShape EntityType="School_DbModel.ASSIGNMENT_GRADING" Width="1.5" PointX="14.25" PointY="33.25" />
+        <EntityTypeShape EntityType="School_DbModel.BEHAVIOUR" Width="1.5" PointX="18" PointY="15.875" />
+        <EntityTypeShape EntityType="School_DbModel.BEHAVIOUR_GRADING" Width="1.5" PointX="17.25" PointY="24.625" />
+        <EntityTypeShape EntityType="School_DbModel.BLOOD_GROUP" Width="1.5" PointX="5.25" PointY="23.125" />
+        <EntityTypeShape EntityType="School_DbModel.CLASS" Width="1.5" PointX="9.75" PointY="12.625" />
+        <EntityTypeShape EntityType="School_DbModel.CLASS_LEVEL" Width="1.5" PointX="9.75" PointY="36.25" />
+        <EntityTypeShape EntityType="School_DbModel.CONTINUOUS_ASSESSMENT" Width="1.5" PointX="18" PointY="32" />
+        <EntityTypeShape EntityType="School_DbModel.COUNTRY" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="School_DbModel.FEE" Width="1.5" PointX="18.75" PointY="35.375" />
+        <EntityTypeShape EntityType="School_DbModel.FEE_DETAIL" Width="1.5" PointX="21" PointY="29" />
+        <EntityTypeShape EntityType="School_DbModel.FEE_TYPE" Width="1.5" PointX="7.5" PointY="15.375" />
+        <EntityTypeShape EntityType="School_DbModel.GENOTYPE" Width="1.5" PointX="5.25" PointY="32.375" />
+        <EntityTypeShape EntityType="School_DbModel.LEVEL" Width="1.5" PointX="9.75" PointY="32.125" />
+        <EntityTypeShape EntityType="School_DbModel.LOCAL_GOVERNMENT" Width="1.5" PointX="5.25" PointY="29.625" />
+        <EntityTypeShape EntityType="School_DbModel.NATIONALITY" Width="1.5" PointX="0.75" PointY="21.25" />
+        <EntityTypeShape EntityType="School_DbModel.PARENT" Width="1.5" PointX="15" PointY="19.875" />
+        <EntityTypeShape EntityType="School_DbModel.PARENT_STUDENT" Width="1.5" PointX="17.25" PointY="21.5" />
+        <EntityTypeShape EntityType="School_DbModel.PARENT_VERIFICATION" Width="1.5" PointX="17.25" PointY="42.125" />
+        <EntityTypeShape EntityType="School_DbModel.PAYMENT" Width="1.5" PointX="9.75" PointY="21" />
+        <EntityTypeShape EntityType="School_DbModel.PERSON" Width="1.5" PointX="7.5" PointY="22.625" />
+        <EntityTypeShape EntityType="School_DbModel.PERSON_TYPE" Width="1.5" PointX="5.25" PointY="25.625" />
+        <EntityTypeShape EntityType="School_DbModel.RELATIONSHIP" Width="1.5" PointX="12.75" PointY="13.625" />
+        <EntityTypeShape EntityType="School_DbModel.RELIGION" Width="1.5" PointX="5.25" PointY="34.75" />
+        <EntityTypeShape EntityType="School_DbModel.RESULT" Width="1.5" PointX="20.25" PointY="18.875" />
+        <EntityTypeShape EntityType="School_DbModel.ROLE" Width="1.5" PointX="10.5" PointY="16.625" />
+        <EntityTypeShape EntityType="School_DbModel.SESSION" Width="1.5" PointX="7.5" PointY="18.5" />
+        <EntityTypeShape EntityType="School_DbModel.SESSION_TERM" Width="1.5" PointX="23.25" PointY="23.625" />
+        <EntityTypeShape EntityType="School_DbModel.SEX" Width="1.5" PointX="5.25" PointY="20.625" />
+        <EntityTypeShape EntityType="School_DbModel.SKILL" Width="1.5" PointX="18" PointY="11.375" />
+        <EntityTypeShape EntityType="School_DbModel.STAFF" Width="1.5" PointX="9.75" PointY="24.75" />
+        <EntityTypeShape EntityType="School_DbModel.STAFF_TYPE" Width="1.5" PointX="7.5" PointY="31.375" />
+        <EntityTypeShape EntityType="School_DbModel.STATE" Width="1.5" PointX="3" PointY="29.5" />
+        <EntityTypeShape EntityType="School_DbModel.STUDENT" Width="1.5" PointX="15" PointY="24" />
+        <EntityTypeShape EntityType="School_DbModel.STUDENT_CATEGORY" Width="1.5" PointX="12.75" PointY="16.25" />
+        <EntityTypeShape EntityType="School_DbModel.STUDENT_LEVEL" Width="1.5" PointX="20.25" PointY="25.125" />
+        <EntityTypeShape EntityType="School_DbModel.STUDENT_REGISTRATION_NUMBER_ASSIGNMENT" Width="1.5" PointX="15" PointY="15.625" />
+        <EntityTypeShape EntityType="School_DbModel.STUDENT_STATUS" Width="1.5" PointX="12.75" PointY="35.875" />
+        <EntityTypeShape EntityType="School_DbModel.SUBJECT" Width="1.5" PointX="9.75" PointY="29.125" />
+        <EntityTypeShape EntityType="School_DbModel.SUBJECT_LEVEL" Width="1.5" PointX="15" PointY="36.25" />
+        <EntityTypeShape EntityType="School_DbModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="School_DbModel.TEACHER_SUBJECT_ALLOCATION" Width="1.5" PointX="12" PointY="19.75" />
+        <EntityTypeShape EntityType="School_DbModel.TERM" Width="1.5" PointX="18" PointY="29.125" />
+        <EntityTypeShape EntityType="School_DbModel.TITLE" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="School_DbModel.USER" Width="1.5" PointX="12.75" PointY="24.75" />
+        <AssociationConnector Association="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_ASSIGNMENT" />
+        <AssociationConnector Association="School_DbModel.FK_ASSIGNMENT_GRADING_ASSIGNMENT" />
+        <AssociationConnector Association="School_DbModel.FK_ASSIGNMENT_STAFF" />
+        <AssociationConnector Association="School_DbModel.FK_ASSIGNMENT_SUBJECT" />
+        <AssociationConnector Association="School_DbModel.FK_ASSIGNMENT_CLASS_LEVEL_CLASS_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_BEHAVIOUR_GRADING_BEHAVIOUR" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_BEHAVIOUR" />
+        <AssociationConnector Association="School_DbModel.FK_BEHAVIOUR_GRADING_CLASS" />
+        <AssociationConnector Association="School_DbModel.FK_BEHAVIOUR_GRADING_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_BEHAVIOUR_GRADING_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_BEHAVIOUR_GRADING_STUDENT" />
+        <AssociationConnector Association="School_DbModel.FK_BEHAVIOUR_GRADING_TERM" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_BLOOD_GROUP" />
+        <AssociationConnector Association="School_DbModel.FK_CLASS_LEVEL_CLASS" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_CLASS" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_LEVEL_CLASS" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_CLASS" />
+        <AssociationConnector Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_CLASS" />
+        <AssociationConnector Association="School_DbModel.FK_CLASS_LEVEL_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_CONTINUOUS_ASSESSMENT" />
+        <AssociationConnector Association="School_DbModel.FK_FEE_DETAIL_FEE" />
+        <AssociationConnector Association="School_DbModel.FK_FEE_DETAIL_FEE_TYPE" />
+        <AssociationConnector Association="School_DbModel.FK_FEE_DETAIL_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_FEE_DETAIL_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_PAYMENT_FEE_TYPE" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_GENOTYPE" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_LEVEL_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_SUBJECT_LEVEL_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_LEVEL" />
+        <AssociationConnector Association="School_DbModel.FK_LOCAL_GOVERNMENT_STATE" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_LOCAL_GOVERNMENT1" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_NATIONALITY" />
+        <AssociationConnector Association="School_DbModel.FK_STATE_NATIONALITY" />
+        <AssociationConnector Association="School_DbModel.FK_PARENT_RELATIONSHIP" />
+        <AssociationConnector Association="School_DbModel.FK_PARENT_SEX" />
+        <AssociationConnector Association="School_DbModel.FK_PARENT_STUDENT_PARENT" />
+        <AssociationConnector Association="School_DbModel.FK_PARENT_USER" />
+        <AssociationConnector Association="School_DbModel.FK_PARENT_STUDENT_STUDENT" />
+        <AssociationConnector Association="School_DbModel.FK_PARENT_VERIFICATION_PARENT" />
+        <AssociationConnector Association="School_DbModel.FK_PAYMENT_PERSON" />
+        <AssociationConnector Association="School_DbModel.FK_PAYMENT_PERSON_TYPE" />
+        <AssociationConnector Association="School_DbModel.FK_PAYMENT_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_PERSON_TYPE" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_RELIGION" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_SEX" />
+        <AssociationConnector Association="School_DbModel.FK_PERSON_STATE" />
+        <AssociationConnector Association="School_DbModel.FK_STAFF_PERSON" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_PERSON" />
+        <AssociationConnector Association="School_DbModel.FK_USER_PERSON" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_SKILL" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_STUDENT" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_SUBJECT" />
+        <AssociationConnector Association="School_DbModel.FK_RESULT_TERM" />
+        <AssociationConnector Association="School_DbModel.FK_USER_ROLE" />
+        <AssociationConnector Association="School_DbModel.FK_SESSION_TERM_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_LEVEL_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_REGISTRATION_NUMBER_ASSIGNMENT_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SESSION" />
+        <AssociationConnector Association="School_DbModel.FK_SESSION_TERM_TERM" />
+        <AssociationConnector Association="School_DbModel.FK_STAFF_STAFF_TYPE" />
+        <AssociationConnector Association="School_DbModel.FK_STAFF_USER" />
+        <AssociationConnector Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_STAFF" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_LEVEL_STUDENT" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_STUDENT_CATEGORY" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_STUDENT_STATUS" />
+        <AssociationConnector Association="School_DbModel.FK_STUDENT_USER" />
+        <AssociationConnector Association="School_DbModel.FK_SUBJECT_LEVEL_SUBJECT" />
+        <AssociationConnector Association="School_DbModel.FK_TEACHER_SUBJECT_ALLOCATION_SUBJECT" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

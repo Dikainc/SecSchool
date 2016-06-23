@@ -1,0 +1,78 @@
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.dll.config
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Business.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Model.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EntityFramework.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Helpers.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Mvc.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Razor.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Data.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Business.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Model.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EntityFramework.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Razor.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Helpers.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Mvc.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Data.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.csprojResolveAssemblyReference.cache
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.dll.config
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Helpers.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Mvc.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Data.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Helpers.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Mvc.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Data.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.dll.config
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Web.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Helpers.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Mvc.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Data.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Helpers.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\System.Web.Mvc.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\bin\EnterpriseSchool.Data.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web\obj\Debug\EnterpriseSchool.Web.pdb

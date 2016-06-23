@@ -1,0 +1,284 @@
+﻿@using EnterpriseSchool.Business
+@using EnterpriseSchool.Model.Model
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META SECTION -->
+    <title>Inventory</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- END META SECTION -->
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" type="text/css" id="theme"
+          href="~/MyUIContent/css/theme-default.css" />
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+    <!-- START PAGE CONTAINER -->
+    <div class="page-container">
+
+        <!-- START PAGE SIDEBAR -->
+        <div class="page-sidebar">
+            <!-- START X-NAVIGATION -->
+            <ul class="x-navigation">
+                <li class="xn-logo">
+                    <a href="index.html">ATLANT</a>
+                    <a href="#" class="x-navigation-control"></a>
+                </li>
+
+                <li class="xn-title">Welcome @User.Identity.Name.ToUpper()</li>
+                
+                <li class="active">
+                    <a href="/Admin/Dashboard/dashboard">
+                        <span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span>
+                    </a>
+                </li>
+               
+
+                @if (User.IsInRole("Admin"))
+                {
+                <li class="xn-openable">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span> <span class="xn-text">Admin</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="/Admin/Setup/Setup">
+                                <span class="glyphicon glyphicon-globe"></span> Term setup
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/User/Addstudent">
+                                <span class="glyphicon glyphicon-globe"></span> Add Student
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/User/Addstaff">
+                                <span class="glyphicon glyphicon-globe"></span> Add Staff
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Staff/AssignStaff">
+                                <span class="glyphicon glyphicon-globe"></span> Assign Staff to Class
+                            </a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                }
+                @if (User.IsInRole("Staff") || User.IsInRole("Admin"))
+                {
+                <li class="xn-openable">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-circle-arrow-left"></span> <span class="xn-text">Staff</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="/Admin/deStock/RenderdeStockPage">
+                                <span class="glyphicon glyphicon- export"></span> My Class
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Assignment/SetAssignment">
+                                <span class="glyphicon glyphicon-export"></span> Set Assignment
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/SalesOrder/RedeemSalesorder">
+                                <span class="glyphicon glyphicon-export"></span> Grade Assignment
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                }
+                @if (User.IsInRole("Student") || User.IsInRole("Admin"))
+                {
+
+                    <li class="xn-openable">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-sort-by-attributes"></span> <span class="xn-text">Student</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="/Admin/catalog/allsearch">
+                                    <span class="glyphicon glyphicon-search"></span>Search Catalog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/store/store">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>View Store
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                }
+                
+                @if (User.IsInRole("Parent") || User.IsInRole("Admin"))
+                {
+                <li class="xn-openable">
+                    <a href="#">
+                        <span class="fa fa-cogs"></span> <span class="xn-text">Parents</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="/Admin/ManageItems/RenderItemsPage">
+                                <span class="glyphicon glyphicon-cog"></span> Manage Items
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/ManageCategories/RenderCategoryPage">
+                                <span class="glyphicon glyphicon-cog"></span> Manage Category
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/ManageStaff/displaymanageUserPage">
+                                <span class="glyphicon glyphicon-cog"></span> Manage Staff
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/ManageWareHouse/RenderMangeWareHousePage">
+                                <span class="glyphicon glyphicon-cog"></span> Manage Warehouse
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Admin/ManageCompany/RenderManageCompanyPage">
+                                <span class="glyphicon glyphicon-cog"></span> Manage Company
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                }
+
+
+            </ul>
+            <!-- END X-NAVIGATION -->
+        </div>
+        <!-- END PAGE SIDEBAR -->
+        <!-- PAGE CONTENT -->
+        <div class="page-content">
+
+            <!-- START X-NAVIGATION VERTICAL -->
+            <ul class="x-navigation x-navigation-horizontal x-navigation-
+
+panel">
+                <!-- TOGGLE NAVIGATION -->
+                <li class="xn-icon-button">
+                    <a href="#" class="x-navigation-minimize">
+                        <span class="fa fa-dedent"></span>
+                    </a>
+                </li>
+                <!-- END TOGGLE NAVIGATION -->
+                <!-- SIGN OUT -->
+                <li class="xn-icon-button pull-right">
+                    <a href="#" class="mb-control" data-box="#mb-
+
+signout"><span class="fa fa-sign-out"></span></a>
+                </li>
+                <!-- END SIGN OUT -->
+
+            </ul>
+            
+            @RenderBody()
+            <hr />
+            <footer class="navbar-fixed-bottom text-center">
+                <p>&copy; @DateTime.Now.Year - Lloydant Inventory</p>
+            </footer>
+
+        </div>
+
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END PAGE CONTAINER -->
+    <!-- MESSAGE BOX-->
+    <div class="message-box animated fadeIn" data-sound="alert" id="mb-
+
+signout">
+        <div class="mb-container">
+            <div class="mb-middle">
+                <div class="mb-title">
+                    <span class="fa fa-sign-out"></span>
+
+                    Log <strong>Out</strong> ?
+                </div>
+                <div class="mb-content">
+                    <p>Are you sure you want to log out?</p>
+                </div>
+                <div class="mb-footer">
+                    <div class="pull-right">
+                        @Html.ActionLink("Yes", "signout", new { area =
+
+"security", Controller = "login" }, new { @Class = "btn btn-success btn-lg" })
+                        <button class="btn btn-default btn-lg mb-control-
+
+close">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MESSAGE BOX-->
+    <!-- START PLUGINS -->
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- END PLUGINS -->
+    <!-- START THIS PAGE PLUGINS-->
+    <script type='text/javascript'
+            src='~/MyUIContent/js/plugins/icheck/icheck.min.js'></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min
+
+.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/morris/raphael-min.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/morris/morris.min.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/rickshaw/d3.v3.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/rickshaw/rickshaw.min.js"></script>
+    <script type='text/javascript'
+            src='~/MyUIContent/js/plugins/jvectormap/jquery-jvectormap-
+
+1.2.2.min.js'></script>
+    <script type='text/javascript'
+            src='~/MyUIContent/js/plugins/jvectormap/jquery-jvectormap-world-mill-
+
+en.js'></script>
+    <script type='text/javascript'
+            src='~/MyUIContent/js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/owl/owl.carousel.min.js"></script>
+
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/moment.min.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- END THIS PAGE PLUGINS-->
+    <!-- START TEMPLATE -->
+    <script type="text/javascript"
+            src="~/MyUIContent/js/settings.js"></script>
+
+    <script type="text/javascript"
+            src="~/MyUIContent/js/plugins.js"></script>
+    <script type="text/javascript"
+            src="~/MyUIContent/js/actions.js"></script>
+
+    <script type="text/javascript"
+            src="~/MyUIContent/js/demo_dashboard.js"></script>
+    <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->
+</body>
+</html>

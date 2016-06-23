@@ -1,0 +1,114 @@
+﻿@model EnterpriseSchool.Web.Areas.Admin.ViewModels.SetUpViewModel
+@{
+    ViewBag.Title = "Setup";
+}
+
+@if (TempData["Message"] != null)
+{
+    @Html.Partial("_Message", (EnterpriseSchool.Model.Model.Message)TempData["Message"])
+}
+
+<div class =" col-md-offset-1 col-md-10">
+    <div class="panel panel-info">
+        <div class=" panel-heading">
+            <h3 class="panel-title">Add a new Session</h3>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("AddSession", "Setup", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-inline">
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.Session.Name, new { @class = "control-label col-md-4" })
+                            <div class="input-group col-md-8">
+                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                @Html.EditorFor(model => model.Session.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Session.Name)
+                        </div>
+
+                    </div>
+                    <br />
+                   
+                        <button type="submit" class="btn btn-primary col-md-offset-2">Create</button>
+                    
+                    </div>
+
+
+            }
+        </div>
+    </div>
+    
+    <div class="panel panel-info">
+        <div class=" panel-heading">
+            <h3 class="panel-title">Chose current Term and Session</h3>
+        </div>
+        <div class="panel-body">
+            <div class="box-content">
+                @using (Html.BeginForm("SetSessionandTerm", "Setup", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-inline">
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                @Html.LabelFor(model => model.SessionTerm.Session, new { @class = "control-label col-md-4" })
+                                <div class="input-group col-md-8">
+                                    <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                    @Html.DropDownListFor(model => model.SessionTerm.Session.Id, (IEnumerable<SelectListItem>)ViewBag.Session, null, new { @class = "form-control span4" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SessionTerm.Session.Name)
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                @Html.LabelFor(model => model.SessionTerm.Term, new { @class = "control-label col-md-4" })
+                                <div class="input-group col-md-8">
+                                    <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                    @Html.DropDownListFor(model => model.SessionTerm.Term.Id, (IEnumerable<SelectListItem>)ViewBag.Term, null, new { @class = "form-control span4" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SessionTerm.Term.Name)
+                            </div>
+                            
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                @Html.LabelFor(model => model.SessionTerm.StartDate, new { @class = "control-label col-md-4" })
+                                <div class="input-group col-md-8">
+                                    <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                    @Html.TextBoxFor(model => model.SessionTerm.StartDate, new { @class = "form-control datepicker" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SessionTerm.StartDate)
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                @Html.LabelFor(model => model.SessionTerm.EndDate, new { @class = "form-label col-md-4" })
+                                <div class="input-group col-md-8">
+                                    <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                    @Html.TextBoxFor(model => model.SessionTerm.EndDate, new { @class = "form-control datepicker" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SessionTerm.EndDate)
+                            </div>
+                        </div>
+                        <br />
+                        <div class="col-md-offset-2">
+                            <button type="submit" class="btn btn-primary">
+                                Set Current Session and Term
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+                }
+            </div>
+    </div>
+
+</div>
+
+</div>

@@ -1,0 +1,485 @@
+﻿@model EnterpriseSchool.Web.Areas.Student.ViewModels.RegistrationViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Content/js/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        //Default Image Rendering
+        if ($('#user_img').attr('src') == null) // This handles rendering of the default image
+        {
+            $('#user_img').attr('src', '/Content/ImageFiles/defaultpersonimage1.png');
+        }
+
+        $("#imgInp").change(function () {
+            readURL(this);
+        });
+
+        $("#Month").change(function () {
+            SetDay($("#Day"), $("#Month"), $("#Year"));
+        })
+
+        $("#Country").change(function() {
+            $("#State").empty();
+            $("#LocalGovernment").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetStates")', // Calling json method
+                dataType: 'json',
+                data: { id: $("#Country").val() },
+                success: function(states) {
+                    $("#State").append('<option value="' + 0 + '">-- Select State --</option>');
+                    $.each(states, function(i, state) {
+                        $("#State").append('<option value="' + state.Value + '">' +
+                            state.Text + '</option>');
+                    });
+                },
+                error: function(ex) {
+                    alert('Failed to retrieve states.' + ex);
+                }
+            });
+            return false;
+        });
+
+        $("#State").change(function() {
+            $("#LocalGovernment").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetLocalGovernments")', // Calling json method
+                dataType: 'json',
+                data: { id: $("#State").val() },
+                success: function(localGovernments) {
+                    $("#LocalGovernment").append('<option value="' + 0 + '">-- Select Local Government --</option>');
+                    $.each(localGovernments, function(i, localGovernment) {
+                        $("#LocalGovernment").append('<option value="' + localGovernment.Value + '">' +
+                            localGovernment.Text + '</option>');
+                    });
+                },
+                error: function(ex) {
+                    alert('Failed to retrieve Local Governments.' + ex);
+                }
+            });
+            return false;
+        });
+
+       
+          
+
+        //$('#radiogrp.radio1:checked').val();
+
+        //$("#StudentUser").is(":checked")
+        $("#StudentDetail").hide();
+        //$("#Person_PersonType").change(function () {
+        $("#PersonType").change(function () {
+            //var rbnVal = $(".personType").val();
+            if ($("#PersonType").val() == "1") {
+                $("#StudentDetail").show();
+            }
+            else {
+                $("#StudentDetail").hide();
+            }
+        });
+
+
+    })
+
+</script>
+<script>
+    function show(input) {
+
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#user_img').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function SetDay(ddlDay, ddlMonth, ddlYear) {
+        ddlDay.empty();
+        var selectedMonth = ddlMonth.val();
+        var selectedYear = ddlYear.val();
+
+        if (selectedYear == '') {
+            alert('Please select Year!');
+            ddlMonth.val("");
+
+            return;
+        }
+
+       
+
+    }
+</script>
+
+<div >
+    <div >
+        @using (Html.BeginForm("Register", "Registration", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+                    <div class="box">
+                        <div class="box-header">
+                            <i class="icon-user"></i>
+                            <h5>Registration</h5></div>
+                        <div class="box-content">
+                            @if (TempData["Message"] != null)
+                            {
+                                @Html.Partial("_Message", (EnterpriseSchool.Model.Model.Message)TempData["Message"])
+                            }
+               
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+                            <fieldset class="form-horizontal">
+
+                                <div>
+                                    <i class="text-info">Kindly fill all the fields provided in this form before clicking the Submit button</i>
+                                </div>
+
+                                <br />
+                                <div class="row">
+                                    <div class=" span12">
+                                        <div class="box-header">
+                                            <h5>Personal Details</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row ">
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span> 
+                                                @Html.EditorFor(model => model.Person.FirstName, new { htmlAttributes = new { @class = "form-control span7", @required = "required", @placeholder = "First Name" } })
+                                                @Html.ValidationMessageFor(model => model.Person.FirstName, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.LastName, new { @class = "form-control span7", @required = "required", @placeholder = "Last Name" })
+                                                @Html.ValidationMessageFor(model => model.Person.LastName, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <div class="row ">
+                                    <div class="span8">
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.OtherName, new { @class = "form-control span7" ,@placeholder="Other Names"})
+                                                @Html.ValidationMessageFor(model => model.Person.OtherName, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span8">
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-home"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.ContactAddress, new { @class = "form-control span7",@placeholder="Contact Address" })
+                                                @Html.ValidationMessageFor(model => model.Person.ContactAddress, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-envelope"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.Email, new { @class = "form-control span7", @required = "required" ,@placeholder="Email Address", @type="email"})
+                                                @Html.ValidationMessageFor(model => model.Person.Email, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-phone"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.MobilePhone, new { @class = "form-control span7",@placeholder="Telephone" })
+                                                @Html.ValidationMessageFor(model => model.Person.MobilePhone, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.Title, (IEnumerable<SelectListItem>)ViewBag.PersonTitle, new { @class = "form-control span5" })
+                                                @Html.ValidationMessageFor(model => model.Person.Title, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-user-md"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.Sex.Id, (IEnumerable<SelectListItem>)ViewBag.Sex, new { @class = "form-control span5" })
+                                                @Html.ValidationMessageFor(model => model.Person.Sex, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.Religion.Id, (IEnumerable<SelectListItem>)ViewBag.Religion, new { @class = "form-control span5" })
+                                                @Html.ValidationMessageFor(model => model.Person.Religion, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend date" id="datepicker">
+                                                <span class="add-on"><i class="icon-th"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.DateOfBirth, new { @class = "form-control span5", @placeholder = "Date of Birth" })
+                                                @Html.ValidationMessageFor(model => model.Person.DateOfBirth, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.BloodGroup.Id, (IEnumerable<SelectListItem>)ViewBag.BloodGroup, new { @class = "form-control span5" })
+                                                @Html.ValidationMessageFor(model => model.Person.BloodGroup.Id, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.Genotype.Id, (IEnumerable<SelectListItem>)ViewBag.Genotype, new { @class = "form-control span5" })
+                                                @Html.ValidationMessageFor(model => model.Person.Genotype.Id, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <br />
+                                <div class="row">
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.Nationality.Id, (IEnumerable<SelectListItem>)ViewBag.Nationality, new { @class = "form-control span5", @id = "Country" })
+                                                @Html.ValidationMessageFor(model => model.Person.Nationality, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.State.Id, (IEnumerable<SelectListItem>)ViewBag.State, new { @class = "form-control span5", @id = "State" })
+                                                @Html.ValidationMessageFor(model => model.Person.State.Id)
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span5">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Person.LocalGovernment.Id, (IEnumerable<SelectListItem>)ViewBag.LocalGovernment, new { @class = "form-control span5", @id = "LocalGovernment" })
+                                                @Html.ValidationMessageFor(model => model.Person.LocalGovernment.Id)
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.HomeTown, new { @class = "form-control span7", @placeholder = "Home Town" })
+                                                @Html.ValidationMessageFor(model => model.Person.HomeTown, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.TextBoxFor(model => model.Person.HomeAddress, new { @class = "form-control span7",@placeholder="Home Address" })
+                                                @Html.ValidationMessageFor(model => model.Person.HomeAddress, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            
+                                <br />
+                                <div class="row">
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span7 box">
+
+                                                @Html.LabelFor(model => model.Person.ImageFileUrl, "Passport")
+                                                <input type="file" title="Upload Passport" id="file" name="file" onchange="show(this)" class="form-control" />
+                                                <img id="user_img" height="100" width="100" />
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <br />
+                                @*<div class="row">
+                                    <div class=" span8">
+                                        <div class="box-header">
+                                            <h5>User Details</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row ">
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-envelope"></i></span>
+                                                @Html.EditorFor(model => model.User.UserName, new { htmlAttributes = new { @class = "form-control span7", @required = "required", @placeholder = "User Name" } })
+                                                @Html.ValidationMessageFor(model => model.User.UserName, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-key"></i></span>
+                                                @Html.TextBoxFor(model => model.User.Password, new { @class = "form-control span7", @required = "required" ,@type="password", @placeholder = "Password" })
+                                                @Html.ValidationMessageFor(model => model.User.Password, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                                <br />*@
+                                <div class="row">
+                                    <div class=" span12">
+                                        <div class="box-header">
+                                            <h5>Student Details</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                
+                                <br />
+                                <div class="row">
+                                    
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Student.StudentCategory.Id, (IEnumerable<SelectListItem>)ViewBag.StudentCategory, new { @class = "form-control span7" })
+                                                @Html.ValidationMessageFor(model => model.Student.StudentCategory.Id, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-pencil"></i></span>
+                                                @Html.DropDownListFor(f => f.Student.StudentStatus.Id, (IEnumerable<SelectListItem>)ViewBag.StudentStatus, new { @class = "form-control span7" })
+                                                @Html.ValidationMessageFor(model => model.Student.StudentStatus.Id, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                                <br />
+                                <div class="row ">
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-envelope"></i></span>
+                                                @Html.EditorFor(model => model.Student.ParentEmail, new { htmlAttributes = new { @class = "form-control span7", @placeholder = "Parent Email" } })
+                                                @Html.ValidationMessageFor(model => model.Student.ParentEmail, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="span8">
+
+                                        <div class="form-group">
+                                            <div class="span8 input-prepend">
+                                                <span class="add-on"><i class="icon-phone"></i></span>
+                                                @Html.TextBoxFor(model => model.Student.ParentPhone, new { @class = "form-control span7", @required = "required", @placeholder = "Parent Phone" })
+                                                @Html.ValidationMessageFor(model => model.Student.ParentPhone, null, new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <br />
+
+                            </fieldset>
+                    
+                            
+
+                        </div>
+                        <br />
+                        
+                    </div>
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">
+            <i class="icon-ok"></i>
+            Submit
+        </button>
+    </div>
+                }
+    </div>
+</div>

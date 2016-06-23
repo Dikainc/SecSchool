@@ -1,0 +1,10 @@
+﻿@model EnterpriseSchool.Web.Areas.Student.ViewModels.StudentAssignmentViewModel
+@{
+    ViewBag.Title = "Assignment";
+}
+
+@foreach (var i in Model.AssignmentList)
+{
+    <p>You have an Assignment : @i.Topic</p>
+}
+

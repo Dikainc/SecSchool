@@ -1,0 +1,72 @@
+﻿@model EnterpriseSchool.Web.Areas.Admin.ViewModels.StudentViewModel
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+@if (TempData["Message"] != null)
+{
+    @Html.Partial("_Message", (EnterpriseSchool.Model.Model.Message)TempData["Message"])
+}
+
+<div class="box">
+    <div class="box-header">
+        <i class="icon-book"></i>
+        <h5>Add student to class</h5>
+    </div>
+    <div class="box-content">
+        @using (Html.BeginForm("AddStudent", "Student", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-inline">
+                <div class="row">
+
+                    <div class="form-group span5">
+                        @Html.LabelFor(model => model.StudentLevel.Student, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            <span class="add-on"><i class="icon-key"></i></span>
+                            @Html.DropDownListFor(model => model.StudentLevel.Student.Id, (IEnumerable<SelectListItem>)ViewBag.Student, "--Select--", new { @class = "form-control span4" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.StudentLevel.Student)
+                    </div>
+
+                    <div class="form-group span5">
+                        @Html.LabelFor(model => model.StudentLevel.Level, new { @class = "control-label span4" })
+                        <div class="input-prepend date span8">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.DropDownListFor(model => model.StudentLevel.Level.Id, (IEnumerable<SelectListItem>)ViewBag.Level, null, new { @class = "form-control span4" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.StudentLevel.Level)
+                    </div>
+
+                    <div class="form-group span5">
+                        @Html.LabelFor(model => model.StudentLevel.Class, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.DropDownListFor(model => model.StudentLevel.Class.Id, (IEnumerable<SelectListItem>)ViewBag.Class, null, new { @class = "form-control span4" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.StudentLevel.Class)
+                    </div>
+
+
+                </div>
+
+
+                <br />
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="icon-ok"></i>
+                        Create
+                    </button>
+                </div>
+
+
+            </div>
+
+
+        }
+    </div>
+
+</div>
+
+

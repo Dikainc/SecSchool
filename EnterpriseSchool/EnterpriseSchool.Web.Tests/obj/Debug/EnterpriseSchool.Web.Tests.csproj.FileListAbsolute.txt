@@ -1,0 +1,75 @@
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.Tests.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.Tests.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.Tests.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.Tests.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Data.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Data.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Business.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Data.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Data.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.Tests.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.Tests.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Data.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Web.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\EnterpriseSchool.Data.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Web.Tests\obj\Debug\EnterpriseSchool.Web.Tests.pdb

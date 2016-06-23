@@ -1,0 +1,33 @@
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Business.dll
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Business.pdb
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.csprojResolveAssemblyReference.cache
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.dll
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Data.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EntityFramework.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Data.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Data.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Data.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Business.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Data.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Data.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Business\obj\Debug\EnterpriseSchool.Business.pdb

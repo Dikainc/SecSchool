@@ -1,0 +1,161 @@
+﻿@model EnterpriseSchool.Web.Areas.Admin.ViewModels.AssignmentViewModel
+@{
+    ViewBag.Title = "SetAssignment";
+}
+
+<script>
+    function LevelChange() {
+        if ($('#var1').val() != "") {
+            $("#var2").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("LevelChangeForClassDropDown", "Assignment")',
+                dataType: 'json',
+                data: { id: $("#var1").val() },
+                success: function (values) {
+                    $("#var2").append('<option value="' + '""' + '">' +
+                        '-- Select --' + '</option>');
+                    $.each(values, function (i, values) {
+                        $("#var2").append('<option value="' + values.Value + '">' +
+                            values.Text + '</option>'),
+                        loadSubject();
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve dropdown' + ex);
+                }
+            });
+        } else {
+            $("#var2").empty();
+        }
+    }
+
+    function loadSubject() {
+        if ($('#var1').val() != "") {
+            $("#var3").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("LevelChangeForSubjectDropDown", "Assignment")',
+                dataType: 'json',
+                data: { id: $("#var1").val() },
+                success: function (values) {
+                    $("#var3").append('<option value="' + '""' + '">' +
+                        '-- Select Level--' + '</option>');
+                    $.each(values, function (i, values) {
+                        $("#var3").append('<option value="' + values.Value + '">' +
+                            values.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve dropdown' + ex);
+                }
+            });
+        } else {
+            $("#var3").empty();
+        }
+    }
+
+</script>
+
+
+@if (TempData["Message"] != null)
+{
+    @Html.Partial("_Message", (EnterpriseSchool.Model.Model.Message)TempData["Message"])
+}
+
+
+<div class="box">
+    <div class="box-header">
+        <i class="icon-book"></i>
+        <h5>Set Assignment</h5>
+    </div>
+    <div class="box-content">
+        @using (Html.BeginForm("SetAssignment", "Assignment", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-inline">
+                <div class="row">
+                    <div class="form-group span8">
+                        @Html.LabelFor(model => model.Assignment.Topic, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            <span class="add-on"><i class="icon-key"></i></span>
+                            @Html.EditorFor(model => model.Assignment.Topic, new { htmlattribute = new { @class = "form-control" } })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Assignment.Topic)
+                    </div>
+
+                    <div class="form-group span4">
+                        @Html.LabelFor(model => model.Assignment.DateDue, new { @class = "control-label span4" })
+                        <div id="datepicker" class="input-prepend date span8">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.TextBoxFor(model => model.Assignment.DateDue)
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Assignment.DateDue)
+                    </div>
+
+                </div>
+                <div class="row">
+
+
+                    <div class="form-group span8">
+                        @Html.LabelFor(model => model.Assignment.ClassLevel, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.DropDownListFor(model => model.Level.Id, (IEnumerable<SelectListItem>)ViewBag.Level, null, new { @class = "form-control span2", @id = "var1", @onchange = "LevelChange()" })
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.DropDownListFor(model => model.Class.Id, (IEnumerable<SelectListItem>)ViewBag.Class, "--Select Class--", new { @class = "form-control span2", @id = "var2" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Assignment.DateDue)
+                    </div>
+
+                    <div class="form-group span4">
+                        @Html.LabelFor(model => model.File, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            @Html.TextBoxFor(model => model.File, new { @class = "form-control", @Type = "File" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.File)
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-group span12">
+                        @Html.LabelFor(model => model.Assignment.Subject, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.DropDownListFor(model => model.Assignment.Subject.Id, (IEnumerable<SelectListItem>)ViewBag.Subject, "--Select Subject--", new { @class = "form-control span2", @id = "var3" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Assignment.Subject)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group span12">
+                        @Html.LabelFor(model => model.Assignment.Description, new { @class = "control-label span4" })
+                        <div class="input-prepend span8">
+                            @Html.TextAreaFor(model => model.Assignment.Description, new { @class = "form-control", @style = "height:200px; width:600px;" })
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Assignment.Description)
+                    </div>
+
+
+                </div>
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="icon-ok"></i>
+                        Submit
+                    </button>
+                </div>
+
+
+
+            </div>
+
+
+        }
+    </div>
+
+</div>
+

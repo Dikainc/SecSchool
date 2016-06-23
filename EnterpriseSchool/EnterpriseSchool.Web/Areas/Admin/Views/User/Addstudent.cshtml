@@ -1,0 +1,331 @@
+﻿@model EnterpriseSchool.Web.Areas.Admin.ViewModels.UserViewModel
+@{
+    ViewBag.Title = "Addstudent";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<script>
+    function LevelChange() {
+        if ($('#var1').val() != "") {
+            $("#var2").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("LevelChangeForClassDropDown", "User")',
+                dataType: 'json',
+                data: { id: $("#var1").val() },
+                success: function (values) {
+                    $("#var2").append('<option value="' + '""' + '">' +
+                        '-- Select --' + '</option>');
+                    $.each(values, function (i, values) {
+                        $("#var2").append('<option value="' + values.Value + '">' +
+                            values.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve dropdown' + ex);
+                }
+            });
+        } else {
+            $("#var2").empty();
+        }
+    }
+
+    function LevelChange2() {
+        if ($('#var3').val() != "") {
+            $("#var").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("LevelChangeForClassDropDown", "User")',
+                dataType: 'json',
+                data: { id: $("#var3").val() },
+                success: function (values) {
+                    $("#var").append('<option value="' + '""' + '">' +
+                        '-- Select --' + '</option>');
+                    $.each(values, function (i, values) {
+                        $("#var").append('<option value="' + values.Value + '">' +
+                            values.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve dropdown' + ex);
+                }
+            });
+        } else {
+            $("#var").empty();
+        }
+    }
+</script>
+
+<div class="col-md-offset-1 col-md-10">
+    @if (TempData["Message"] != null)
+    {
+        @Html.Partial("_Message", (EnterpriseSchool.Model.Model.Message)TempData["Message"])
+    }
+    <br />
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>Add a single student</h3>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("Addstudent", "User", FormMethod.Post))
+            {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                
+                
+               <div class="row">
+                   <div class="col-md-6">
+                       <div class="form-group">
+                           @Html.LabelFor(model => model.User.UserName, new { @class = "control-label col-md-4" })
+                           <div class="col-md-8">
+                               <div class="input-group">
+                                   <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                   @Html.EditorFor(model => model.User.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                               </div>
+                               @Html.ValidationMessageFor(model => model.User.UserName, "", new { @class = "text-danger" })
+                           </div>
+                       </div>
+                   </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.User.Password, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                    @Html.TextBoxFor(model => model.User.Password, new { @class = "form-control" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.User.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.FirstName, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.EditorFor(model => model.Student.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.FirstName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.LastName, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.EditorFor(model => model.Student.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.LastName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.OtherName, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.EditorFor(model => model.Student.OtherName, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.OtherName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.RegNo, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.EditorFor(model => model.Student.RegNo, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.RegNo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Level, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.DropDownListFor(model => model.Level.Id, (IEnumerable<SelectListItem>)ViewBag.Level, new { @class = "form-control", @id = "var1", @onchange = "LevelChange()" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Level, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Class, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.DropDownListFor(model => model.Class.Id, (IEnumerable<SelectListItem>)ViewBag.Class,"--Select Class--", new { @class = "form-control", @id = "var2" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.Category, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                    @Html.DropDownListFor(model => model.Student.Category.Id, (IEnumerable<SelectListItem>)ViewBag.Category, new { @class = "form-control", @id = "class" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.Category, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.ParentPhone, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                    @Html.EditorFor(model => model.Student.ParentPhone, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.ParentPhone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student.ParentEmail, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                    @Html.TextBoxFor(model => model.Student.ParentEmail, new { @class = "form-control" })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Student.ParentEmail, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div>
+                    <button type="submit" class="btn btn-primary col-md-offset-2">Add Student</button>
+                </div>
+
+
+            </div>
+            }
+        </div>
+    </div>
+    <br />
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>Add multiple students</h3>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("Addstudents", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-offset-9 col-md-3">
+                            @Html.ActionLink("Download Excel Template", "Download", "User", new { fileName = "StudentTemplate" }, new { @class = "btn btn-primary", @target = "_blank" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Level, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                        @Html.DropDownListFor(model => model.Level.Id, (IEnumerable<SelectListItem>)ViewBag.Level, new { @class = "form-control", @id = "var3", @onchange = "LevelChange2()" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Level, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Class, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                        @Html.DropDownListFor(model => model.Class.Id, (IEnumerable<SelectListItem>)ViewBag.Class, "--Select Class--", new { @class = "form-control", @id = "var" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Student.Category, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                        @Html.DropDownListFor(model => model.Student.Category.Id, (IEnumerable<SelectListItem>)ViewBag.Category, new { @class = "form-control", @id = "class" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Student.Category, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class ="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Hpf, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.Hpf, new { @class = "form-control", @Type = "File" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Hpf, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br />
+                    <div>
+                        <button type="submit" class="btn btn-primary col-md-offset-1">Add Students</button>
+                    </div>
+
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

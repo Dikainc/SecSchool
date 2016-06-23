@@ -1,0 +1,84 @@
+﻿@model EnterpriseSchool.Web.Areas.Admin.ViewModels.StaffViewModel
+@{
+    ViewBag.Title = "AssignStaff";
+}
+
+@if (TempData["Message"] != null)
+{
+    @Html.Partial("_Message", (EnterpriseSchool.Model.Model.Message)TempData["Message"])
+}
+
+<div class="col-md-offset-1 col-md-10">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Assign subject to teachers</h3>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("AssignStaff", "Staff", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-inline">
+                    
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.TeacherSubjectAllocation.Level, new { @class = "control-label col-md-4" })
+                            <div class="input-group col-md-8">
+                                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                @Html.DropDownListFor(model => model.TeacherSubjectAllocation.Level.Id, (IEnumerable<SelectListItem>)ViewBag.Level, null, new { @class = "form-control span4" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.TeacherSubjectAllocation.Level)
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.TeacherSubjectAllocation.Class, new { @class = "control-label col-md-4" })
+                            <div class="input-group col-md-8">
+                                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                @Html.DropDownListFor(model => model.TeacherSubjectAllocation.Class.Id, (IEnumerable<SelectListItem>)ViewBag.Class, null, new { @class = "form-control span4" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.TeacherSubjectAllocation.Class)
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.TeacherSubjectAllocation.Staff, new { @class = "control-label col-md-4" })
+                            <div class="input-group date col-md-8">
+                                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                @Html.DropDownListFor(model => model.TeacherSubjectAllocation.Staff.Id, (IEnumerable<SelectListItem>)ViewBag.Staff, "--Select Staff--", new { @class = "form-control span4" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.TeacherSubjectAllocation.Staff)
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.TeacherSubjectAllocation.SubJect, new { @class = "control-label col-md-4" })
+                            <div class="input-group col-md-8">
+                                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                @Html.DropDownListFor(model => model.TeacherSubjectAllocation.SubJect.Id, (IEnumerable<SelectListItem>)ViewBag.Subject, null, new { @class = "form-control span4" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.TeacherSubjectAllocation.SubJect)
+                        </div>
+
+
+                    </div>
+                    <br />
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="icon-ok"></i>
+                            ssign
+                        </button>
+                    </div>
+
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+

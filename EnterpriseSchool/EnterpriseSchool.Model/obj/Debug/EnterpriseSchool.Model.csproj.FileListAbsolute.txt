@@ -1,0 +1,30 @@
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.dll
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.pdb
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.dll
+c:\users\ai-fex\documents\visual studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.csprojResolveAssemblyReference.cache
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.dll.config
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.xml
+C:\Users\Ai-FEX\Documents\Visual Studio 2013\Projects\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.dll.config
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.dll.config
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EnterpriseSchool.Model.pdb
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.csprojResolveAssemblyReference.cache
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.dll
+C:\Users\Onyedika\Documents\LLoydant files\SchoolLatestBuild\EnterpriseSchool\EnterpriseSchool.Model\obj\Debug\EnterpriseSchool.Model.pdb

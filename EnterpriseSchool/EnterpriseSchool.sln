@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{68D5C048-8BF8-4772-90F0-2644752A6700}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLayer", "DataLayer", "{736C9401-EBC4-41FC-8593-2404CD766123}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModelLayer", "ModelLayer", "{440E3995-EB34-49FE-9DF1-8E03BF107B6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{349D1EDB-C5AD-45AB-8397-DCB7687538E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseSchool.Business", "EnterpriseSchool.Business\EnterpriseSchool.Business.csproj", "{FE168988-F234-4A3D-9C16-DC49185C1099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseSchool.Data", "EnterpriseSchool.Data\EnterpriseSchool.Data.csproj", "{41C01134-F454-43C3-A89C-E340F4F1C18A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseSchool.Model", "EnterpriseSchool.Model\EnterpriseSchool.Model.csproj", "{34CB640F-7469-41B6-B6D2-3053DD5DBC3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseSchool.Web", "EnterpriseSchool.Web\EnterpriseSchool.Web.csproj", "{24ABB4EF-F260-47F8-83E7-78A1C6B4D3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseSchool.Web.Tests", "EnterpriseSchool.Web.Tests\EnterpriseSchool.Web.Tests.csproj", "{C1D4645C-4B6F-4326-B4F0-7A50D031AF5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE168988-F234-4A3D-9C16-DC49185C1099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE168988-F234-4A3D-9C16-DC49185C1099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE168988-F234-4A3D-9C16-DC49185C1099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE168988-F234-4A3D-9C16-DC49185C1099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C01134-F454-43C3-A89C-E340F4F1C18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C01134-F454-43C3-A89C-E340F4F1C18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C01134-F454-43C3-A89C-E340F4F1C18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C01134-F454-43C3-A89C-E340F4F1C18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CB640F-7469-41B6-B6D2-3053DD5DBC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CB640F-7469-41B6-B6D2-3053DD5DBC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CB640F-7469-41B6-B6D2-3053DD5DBC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CB640F-7469-41B6-B6D2-3053DD5DBC3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24ABB4EF-F260-47F8-83E7-78A1C6B4D3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24ABB4EF-F260-47F8-83E7-78A1C6B4D3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24ABB4EF-F260-47F8-83E7-78A1C6B4D3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24ABB4EF-F260-47F8-83E7-78A1C6B4D3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D4645C-4B6F-4326-B4F0-7A50D031AF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D4645C-4B6F-4326-B4F0-7A50D031AF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D4645C-4B6F-4326-B4F0-7A50D031AF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D4645C-4B6F-4326-B4F0-7A50D031AF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE168988-F234-4A3D-9C16-DC49185C1099} = {68D5C048-8BF8-4772-90F0-2644752A6700}
+		{41C01134-F454-43C3-A89C-E340F4F1C18A} = {736C9401-EBC4-41FC-8593-2404CD766123}
+		{34CB640F-7469-41B6-B6D2-3053DD5DBC3D} = {440E3995-EB34-49FE-9DF1-8E03BF107B6A}
+		{24ABB4EF-F260-47F8-83E7-78A1C6B4D3D8} = {349D1EDB-C5AD-45AB-8397-DCB7687538E0}
+		{C1D4645C-4B6F-4326-B4F0-7A50D031AF5E} = {349D1EDB-C5AD-45AB-8397-DCB7687538E0}
+	EndGlobalSection
+EndGlobal
